@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 50%;
+  max-width: 1400px;
+  margin: 0rem;
+  background: #737373;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+/*  Start nav part of the website */
+
+.centerNav {
+  position: absolute;
+  text-align: center;
+  /* border: solid sienna; */
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  top:2rem;
+  left: auto;
+  right: auto;
+  font-weight: 200;
+}
+
+nav {
+  text-align: center;
+  /* border: solid pink; */
+  width: 100%; 
+  color: #de1a1a; 
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.link-group {
+  list-style: none;
+  display: flex;
+  /* border: solid pink; */
+}
+
+.link a {
+  color: rgb(0, 0, 0);
+  opacity: 0.8;
+  text-decoration:none;
+  text-transform: capitalize;
+  padding: 10px 30px;
+  margin: 0 10px;
+  line-height: 80px;
+  font-size: 2rem;
+
+  /* border: solid rgb(218, 15, 49); */
+}
+
+.link a:hover,
+.link.active a {
+  color: rgba(222, 26, 26);
+  opacity: 1;
+}
+/* This is the ending of the navbar */
+
+.Link a{
+  color: rgb(17, 17, 17);
+  opacity: 0.8;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 10px 10px;
+  margin: 0 20px;
+  line-height: 80px;
+  transition: 0.5s;
+  font-size: 20px;
+}
+.context{
+/* border: solid blue; */
+display:grid;
+grid-template-columns: 50% 50%;
+grid:pad 100%;
+width: 200%;
+margin-top: 7rem;
+}
+.context > div {
+/* border: solid gold;  */
+margin: 2rem;
+text-align: center;
+justify-content: center;
+padding: 5%;
+
+}
+
+.home-img {
+  position: relative;
+  object-fit: cover;
+  /* border: solid rgb(139, 120, 34); */
+}
+
+iframe{
+ /* border: solid green; */
+ height: 100%;
+
+}
+
+/* This is where my footer starts */
+footer{
+  position: relative;
+  list-style: none;
+  /* border: solid rgb(255, 0, 212); */
+  top: 50px;
+  width: 200px;
+  height: 150px;
+  margin-left: 7rem;
+}
+.footer-link {
+  position: relative;
+  /* border: solid sienna; */
+  width: 100%;
+  text-align: right;
+  /* border: solid gold; */
+}

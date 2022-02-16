@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  max-width: 1400px;
+  display: block;
+  margin: auto;
+  min-height: 100vh;
+  background: #737373;
+  font-family: sans-serif;
+  padding: 8rem;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 2rem;
+  left: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  background: #747272;
+  /* border: solid rgb(102, 139, 34); */
+}
+
+.link-group {
+  list-style: none;
+  display: flex;
+
+}
+
+.link a {
+  color: rgb(17, 17, 17);
+  opacity: 0.5;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 10px 50px;
+  margin: 0 20px;
+  line-height: 80px;
+  transition: 0.5s;
+  font-size: 1.5rem;
+  /* border: solid rgb(127, 34, 139); */
+}
+
+.link a:hover,
+.link.active a {
+  color: rgb(17, 17, 17);
+  opacity: 1;
+  /* border: solid rgb(34, 123, 139); */
+}
+
+.Linkedin{
+ width: 6rem; 
+}
+
+.Github{
+width: 6rem;
+
+}
+.Link a{
+  color: rgb(17, 17, 17);
+  opacity: 0.8;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 10px 10px;
+  margin: 0 20px;
+  line-height: 80px;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+
+.about-section{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0rem;
+    margin-left: -13rem;
+    padding: 6rem;
+    position: absolute;
+    top: 5rem;
+    right: 0rem;
+    opacity: 8;
+    /* transition: 1s; */
+    /* border: solid gainsboro; */
+}
+
+.about{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 40px;
+}
+
+.about-img-container{
+    position: relative;
+}
+
+.about-info{
+    color: rgb(233, 152, 152);
+    opacity: 0.6;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.about-img{
+    width: 40rem;
+    height: 49rem;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.download-cv-btn{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .5s;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.download-cv-btn:hover{
+    background: #000;
+}

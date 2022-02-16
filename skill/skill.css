@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 50%;
+  max-width: 1400px;
+  margin: 0rem;
+  background: #737373;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+/*  Start nav part of the website */
+
+.centerNav {
+  position: absolute;
+  text-align: center;
+  border: solid sienna;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  top:2rem;
+  left: auto;
+  right: auto;
+  font-weight: 200;
+}
+
+nav {
+  text-align: center;
+  /* border: solid pink; */
+  width: 100%; 
+  color: #de1a1a; 
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.link-group {
+  list-style: none;
+  display: flex;
+  /* border: solid pink; */
+}
+
+.link a {
+  color: rgb(0, 0, 0);
+  opacity: 0.8;
+  text-decoration:none;
+  text-transform: capitalize;
+  padding: 10px 30px;
+  margin: 0 10px;
+  line-height: 80px;
+  font-size: 2rem;
+
+  /* border: solid rgb(218, 15, 49); */
+}
+
+.link a:hover,
+.link.active a {
+  color: rgba(222, 26, 26);
+  opacity: 1;
+}
+/* this is when a project is going to start */
+/* project-section */
+
+.project-section{
+    width: 100%;
+    border: solid yellow;
+    min-height: 100rem;
+    padding: 150px 100px 100px;
+    position: relative;
+    left: 500px;
+    transition: 0s;
+    width: 100j;
+    /* opacity: 0; */
+}
+
+.project-heading{
+    font-size: 100px;
+    background: #252525;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #1a1a1a;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 8px transparent;
+}
+
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
+    border: solid blue;
+    grid-gap: 100px;
+    width: 1000px;
+}
+
+.project-card{
+    height: 400px;
+    position: relative;
+    border: solid yellow;
+}
+
+.project-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.project-content{
+    position: relative;
+    padding: 40px;
+    color: #fff;
+    transition: .5s;
+    /* opacity: 0; */
+}
+
+.project-title{
+    font-size: 50px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 300;
+}
+
+.project-info{
+    margin: 40px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.project-btn-grp{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.project-btn{
+    height: 40px;
+    text-transform: capitalize;
+    font-size: 18px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.project-btn.live{
+    background: none;
+    border: 2px solid #fff;
+}
+
+.project-card:hover .project-img{
+    filter: blur(20px);
+}
+
+.project-card:hover .project-content{
+    /* opacity: 1; */
+}
+.Linkedin{
+ width: 6rem; 
+
+}
+.Github{
+width: 6rem;
+
+}
+.Link a{
+  color: rgb(17, 17, 17);
+  opacity: 0.8;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 10px 10px;
+  margin: 0 20px;
+  line-height: 80px;
+  /* transition: 0.5s; */
+  font-size: 20px;
+} 

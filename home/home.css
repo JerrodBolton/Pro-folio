@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 50%;
+  max-width: 1400px;
+  margin: 0rem;
+  /* background-color: white; */
+  background: rgb(143, 143, 143);
+  background: linear-gradient(
+    0deg,
+    rgba(143, 143, 143, 1) 18%,
+    rgba(222, 26, 26, 0.9640231092436975) 62%,
+    rgba(0, 0, 0, 0.9192051820728291) 98%
+  );
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+/*  Start nav part of the website */
+
+.centerNav {
+  position: absolute;
+  text-align: center;
+  /* border: solid sienna; */
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  left: auto;
+  right: auto;
+  font-weight: 200;
+}
+
+nav {
+  text-align: center;
+  /* border: solid pink; */
+  width: 100%; 
+  color: #de1a1a; 
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.link-group {
+  list-style: none;
+  display: flex;
+  /* border: solid pink; */
+}
+
+.link a {
+  color: rgba(143, 143, 143, 1);
+  opacity: 0.8;
+  text-decoration:none;
+  text-transform: capitalize;
+  padding: 10px 30px;
+  margin: 0 10px;
+  line-height: 80px;
+  font-size: 2rem;
+  /* border: solid rgb(218, 15, 49); */
+}
+
+.link a:hover,
+.link.active a {
+  color: rgba(222, 26, 26);
+  opacity: 1;
+}
+/* End Nav part of the website */
+
+.centerInfo {
+  position: absolute;
+  text-align: center;
+  /* border: solid sienna; */
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  top: 5rem;
+  bottom: 5rem ;
+  left: auto;
+  right: auto;
+
+}
+
+.content > div {
+  /* border: solid green; */
+}
+
+.home-section {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  opacity: 2;
+  padding: 3px;
+  margin-top: 55px;
+  /* border: solid palegreen; */
+}
+/* this is my heading that say "Hey, I am Jerrod Bolton" */
+
+h1 {
+
+  position: relative;
+  text-align: left;
+  padding-left: 40px;
+  font-size: 120px;
+  font-weight: 300;
+}
+h2 {
+  position: relative;
+  text-align: left;
+  padding-left: 90px;
+  font-size: 30px;
+  font-weight: 1000;
+  Bold: 700;
+}
+
+.whoIam {
+  color: rgb(235, 235, 235);
+  text-align: left;
+  padding: 30px;
+  padding-left: 20px;
+  text-transform: capitalize;
+  font-weight: 300;
+}
+
+.home-img {
+  position: relative;
+  object-fit: cover;
+  opacity: 0.9;
+  border-radius: 30px;
+  
+}
+
+#videoID {
+  width: 9rem;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  padding-bottom: 48px;
+  box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
+  margin-top: 1.6em;
+  margin-bottom: 0.9em;
+  overflow: hidden;
+  border-radius: 8px;
+  will-change: transform;
+}
+
+#home-page {
+  position: unset;
+  /* border: solid hotpink; */
+  margin: 30px;
+}
+
+/* footer > .all-of-footer {
+ position: relative ;
+  margin-top: 200px;
+} */
+/* .all-of-footer > li {
+  margin: 40px;
+} */
+/* .all-of-footer {
+  border: solid rgb(0, 105, 35); 
+  width: 100%;
+  position: relative;
+  display: grid;
+  height: 6rem;
+  grid-template-columns: 75% 25%;
+  grid-row-gap: 100%;
+   grid-column-gap: 3px;
+   background-color: #ffffff; 
+} */
+footer{
+  position: relative;
+  list-style: none;
+  /* border: solid rgb(255, 0, 212); */
+  top: 50px;
+  width: 200px;
+  height: 150px;
+  margin-left: 7rem;
+}
+/* .footer-info {
+  border: solid slategray; 
+  color: #030303;
+  opacity: 0.8;
+  line-height: 1rem;
+  transition: 0.5s;
+  font-size: 1rem;
+  position: absolute;
+  left: 43.5rem;
+  border-style: groove;
+} */
+
+.footer-link {
+  position: relative;
+  /* border: solid sienna; */
+  width: 100%;
+  text-align: right;
+  /* border: solid gold; */
+}
