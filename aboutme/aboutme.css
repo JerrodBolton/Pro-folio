@@ -102,7 +102,8 @@ width: 6rem;
 }
 
 .about-info{
-    color: rgb(233, 152, 152);
+    color: rgb(0, 0, 0);
+
     opacity: 0.6;
     font-size: 20px;
     line-height: 40px;
@@ -115,6 +116,15 @@ width: 6rem;
     border-radius: 20px;
 }
 
+iframe{
+ width:600px;
+ height: 780px;
+ border-radius: 20px;
+ background-color: white;
+ border-color: aqua;
+
+
+}
 .download-cv-btn{
     position: absolute;
     bottom: 20px;
