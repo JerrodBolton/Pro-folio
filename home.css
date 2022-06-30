@@ -95,37 +95,40 @@ nav {
   opacity: 2;
   padding: 3px;
   margin-top: 55px;
-  /* border: solid palegreen; */
+  border: solid palegreen;
 }
 /* this is my heading that say "Hey, I am Jerrod Bolton" */
 
 h1 {
-
   position: relative;
   text-align: left;
   padding-left: 40px;
   font-size: 120px;
   font-weight: 300;
 }
+
 h2 {
   position: relative;
   text-align: left;
   padding-left: 90px;
   font-size: 30px;
   font-weight: 1000;
-  Bold: 700;
+ 
 }
 
 .whoIam {
   color: rgb(235, 235, 235);
-  text-align: left;
+  text-align: right;
   padding: 30px;
   padding-left: 20px;
   text-transform: capitalize;
-  font-weight: 300;
+  font-weight: 20;
+  border: solid gold
 }
 
-.home-img {
+img {
+  width:rem 90rem;
+  height: 70rem;
   position: relative;
   object-fit: cover;
   opacity: 0.9;
@@ -154,34 +157,24 @@ h2 {
   margin: 30px;
 }
 
-/* footer > .all-of-footer {
+footer > .all-of-footer {
  position: relative ;
   margin-top: 200px;
 } */
-/* .all-of-footer > li {
+.all-of-footer > li {
   margin: 40px;
-} */
-/* .all-of-footer {
-  border: solid rgb(0, 105, 35); 
-  width: 100%;
-  position: relative;
-  display: grid;
-  height: 6rem;
-  grid-template-columns: 75% 25%;
-  grid-row-gap: 100%;
-   grid-column-gap: 3px;
-   background-color: #ffffff; 
-} */
+}
+
 footer{
   position: relative;
   list-style: none;
-  /* border: solid rgb(255, 0, 212); */
-  top: 50px;
+  border: solid rgb(255, 0, 212);
+  top: 4rem;
   width: 200px;
   height: 150px;
   margin-left: 7rem;
 }
-/* .footer-info {
+.footer-info {
   border: solid slategray; 
   color: #030303;
   opacity: 0.8;
@@ -191,12 +184,11 @@ footer{
   position: absolute;
   left: 43.5rem;
   border-style: groove;
-} */
+}
 
 .footer-link {
-  position: relative;
   /* border: solid sienna; */
-  width: 100%;
-  text-align: right;
-  /* border: solid gold; */
+  width: 50rem;
+  /* text-align: right; */
+  border: solid gold;
 }

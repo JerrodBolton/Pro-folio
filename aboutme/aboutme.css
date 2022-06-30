@@ -1,131 +1,139 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  width: 100%;
-  max-width: 1400px;
-  display: block;
-  margin: auto;
-  min-height: 100vh;
-  background: #737373;
-  font-family: sans-serif;
-  padding: 8rem;
-  scroll-behavior: smooth;
+    width: 100%;
+    max-width: 1400px;
+    display: block;
+    margin: auto;
+    min-height: 100vh;
+    background: #737373;
+    font-family: sans-serif;
+    padding: 8rem;
+    scroll-behavior: smooth;
 }
 
 .navbar {
-  width: 100%;
-  position: absolute;
-  top: 2rem;
-  left: 0rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 5;
-  background: #747272;
-  /* border: solid rgb(102, 139, 34); */
+    width: 100%;
+    position: absolute;
+    top: 2rem;
+    left: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    background: #747272;
+    /* border: solid rgb(102, 139, 34); */
 }
 
 .link-group {
-  list-style: none;
-  display: flex;
+    list-style: none;
+    display: flex;
 
 }
 
 .link a {
-  color: rgb(17, 17, 17);
-  opacity: 0.5;
-  text-decoration: none;
-  text-transform: capitalize;
-  padding: 10px 50px;
-  margin: 0 20px;
-  line-height: 80px;
-  transition: 0.5s;
-  font-size: 1.5rem;
-  /* border: solid rgb(127, 34, 139); */
+    color: rgb(17, 17, 17);
+    opacity: 0.5;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 50px;
+    margin: 0 20px;
+    line-height: 80px;
+    transition: 0.5s;
+    font-size: 1.5rem;
+    /* border: solid rgb(127, 34, 139); */
 }
 
 .link a:hover,
 .link.active a {
-  color: rgb(17, 17, 17);
-  opacity: 1;
-  /* border: solid rgb(34, 123, 139); */
+    color: rgb(17, 17, 17);
+    opacity: 1;
+    /* border: solid rgb(34, 123, 139); */
 }
 
-.Linkedin{
- width: 6rem; 
+.Linkedin {
+    width: 6rem;
 }
 
-.Github{
-width: 6rem;
+.Github {
+    width: 6rem;
 
 }
-.Link a{
-  color: rgb(17, 17, 17);
-  opacity: 0.8;
-  text-decoration: none;
-  text-transform: capitalize;
-  padding: 10px 10px;
-  margin: 0 20px;
-  line-height: 80px;
-  transition: 0.5s;
-  font-size: 20px;
+
+.Link a {
+    color: rgb(17, 17, 17);
+    opacity: 0.8;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 10px;
+    margin: 0 20px;
+    line-height: 80px;
+    transition: 0.5s;
+    font-size: 20px;
 }
 
 
-.about-section{
+.about-section {
     width: 100%;
-    min-height: 100vh;
-    margin: 0rem;
-    margin-left: -13rem;
-    padding: 6rem;
+    margin: 1rem;
+    padding: 5rem;
     position: absolute;
     top: 5rem;
     right: 0rem;
     opacity: 8;
+    grid-template-columns: 50% 50%;
+    grid-row: 100%;
     /* transition: 1s; */
-    /* border: solid gainsboro; */
+    border: solid gainsboro 10px;
+
 }
 
-.about{
+.about {
     width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-gap: 40px;
 }
 
-.about-img-container{
-    position: relative;
+
+.about-img {
+    width: 40rem;
+    height: 49rem;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 20px;
 }
 
-.about-info{
-    color: rgb(0, 0, 0);
+iframe {
+    width: 600px;
+    height: 780px;
+    border-radius: 20px;
+    background-color: white;
+    /* border-color: aqua; */
+    position: relative;
 
+}
+
+.infoAboutMe {
+    border: solid rgb(255, 0, 0);
+    border-radius: 20px;
+    margin-top: 1rem;
+    padding: 20px;
+
+}
+
+.about-info {
+    color: rgb(255, 255, 255);
     opacity: 0.6;
     font-size: 20px;
     line-height: 40px;
 }
 
-.about-img{
-    width: 40rem;
-    height: 49rem;
-    object-fit: cover;
-    border-radius: 20px;
-}
-
-iframe{
- width:600px;
- height: 780px;
- border-radius: 20px;
- background-color: white;
- border-color: aqua;
-
-
-}
-.download-cv-btn{
+.download-cv-btn {
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -140,6 +148,35 @@ iframe{
     background: rgba(0, 0, 0, 0.5);
 }
 
-.download-cv-btn:hover{
+.download-cv-btn:hover {
+    background: rgb(241, 27, 27);
+}
+
+.download-cv-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .5s;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.download-cv-btn:hover {
     background: #000;
+}
+
+.about-info {
+    /* border: solid rgb(255, 0, 0); */
+    margin-top: 1rem;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    opacity: 0.6;
+    font-size: 20px;
+    line-height: 40px;
 }
