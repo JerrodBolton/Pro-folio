@@ -17,7 +17,7 @@ body {
 .centerNav {
   position: absolute;
   text-align: center;
-  border: solid sienna;
+  /* border: solid sienna; */
   justify-content: center;
   width: 100%;
   text-align: center;
@@ -67,12 +67,13 @@ nav {
 /* project-section */
 
 .project-section{
-    width: 100%;
-    border: solid rgb(9, 255, 0);
+    border-radius:20px;
+    border: solid rgb(222, 26, 26) 4px;
     min-height: 100rem;
-    top-magin
-    position: relative;
-    left: 500px;
+    position: absolute;
+    left: 10rem;
+    top:10rem;
+    right:10rem;
     /* opacity: 0; */
 }
 
@@ -91,21 +92,26 @@ nav {
 .project-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);  
-    border: solid blue;
+    /* border: solid blue; */
+    position: absolute;
+    left: 14rem;
+    right: 10rem;
     grid-gap: 100px;
     width: 1000px;
 }
 
 .project-card{
-    height: 400px;
+    height: 28rem;
     position: relative;
-    border: solid yellow;
+    border-radius: 20px;
+    border: solid rgba(222, 26, 26) 5px;
 }
 
 .project-img{
     width: 100%;
     height: 100%;
     position: absolute;
+    border-radius: 10px;
     top: 0;
     left: 0;
     object-fit: cover;
@@ -115,7 +121,6 @@ nav {
 .project-content{
     position: relative;
     padding: 40px;
-    color: #fff;
     transition: .5s;
     /* opacity: 0; */
 }
@@ -133,7 +138,11 @@ nav {
     line-height: 30px;
     text-align: center;
 }
+a{
+ color:#fff;
 
+
+}
 .project-btn-grp{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
