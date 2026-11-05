@@ -2,132 +2,150 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="home.css" />
-    <title>Document</title>
+    <title>Jerrod Bolton — AI &amp; Computer Science Portfolio</title>
+    <meta name="description" content="Portfolio of Jerrod Bolton, Artificial Intelligence and Advancing Computer Science student at the University of Advancing Technology." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
- <div class="centerNav">
-    <nav>
-      <ul class="link-group">
-        <li class="link active"><a href="index.html">Home</a></li>
-        <li class="link"><a href="./aboutme/aboutMe.html">About Me</a></li>
-        <li class="link"><a href="./skill/skill.html"> Skills & Projects</a></li>
-        <li class="link"><a href="./contact/contact.html">Contact</a></li>
-      </ul>
-    </nav>
-</div>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <pre id="home-page" >
-    &LT;!DOCTYPE html&GT;
-    &LT;html lang="en"&GT;
-    
-    &LT;head&GT;
-    &LT;meta charset="UTF-8"&GT;
-    &LT;meta http-equiv="X-UA-Compatible" content="IE=edge"&GT;
-    &LT;meta name="viewport" content="width=device-width, initial-scale=1.0"&GT;
-    &LT;title&GT; Let me know more about you&LT;title&GT;
-    &LT;head&GT;
-    
-    &LT;body&GT; 
-    &LT;nav&GT;
-    &LT;ul&GT;
-    &LT;li&GT;
-    &LT;a href="https:www.google.com"&GT;Send email&LT;a&GT;
-    &LT;li&GT;
-    &LT;ul&GT;
-    &LT;nav&GT;
-    
-    &LT;style&GT;
-    .aboutMe &#123;
-    color: green;
-    text-align: center;
-    &#125;
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="index.html" aria-label="Jerrod Bolton, home">JB<span>.</span></a>
+        <nav class="site-nav" aria-label="Main">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">Menu</button>
+          <ul class="nav-list" id="nav-list">
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="objectives.html">Objectives</a></li>
+            <li><a href="sip.html">SIP</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    h1 &#123;
-    color: red;
-    background-color: slategrey;
-    text-align: center
-    &#125;
-    
-    h2 &#123;
-    color: blue;
-    background-color: slategrey;
-    text-align: center;
-    &#125;
-    
-    .name &#123;
-    color: purple;
-    background-color: rgb&#40;184, 147, 26&#41;;
-    
-    &#125;
-    
-    .age &#123;
-    color: yellow;
-    background-color: rgb&#40;153, 32, 133&#41;;
-    
-    &#125;
-    
-    &LT;h1&GT; Who are you and what do you like to do?&LT;h1&GT;
-    &LT;div class="aboutme"&GT;
-    
-    &LT;p&GT; This is about me getting to know you as the person that you are. I want to get to know
-    your age. I would love to know your birthday. What's your favorite food, and can I get some.
-    I want to know everything and anything that you are willing to tell.
-    This is AI counseling prepare to be questioned.
-    
-    &LT;p&GT;
-    &LT;div&GT;
-    
-    &LT;h2&GT; The questions that I will ask about the things that I want to know about you. &LT;h2&GT;
-    
-    &LT;div&GT;
-    &LT;p&GT;
-    &LT;ol&GT;
-    &LT;div class="name"&GT;
-    &LT;li&GT;What is your name?&LT;li&GT;
-    &LT;div&GT;
-    &LT;div class="age"&GT;
-    &LT;li&GT;What is your birthday?&LT;li&GT;
-    &LT;div&GT;
-    &LT;div class="location"&GT;
-    &LT;li&GT; Where are you from? &LT;li&GT;
-    &LT;div&GT;
-    &LT;div class="truth"&GT;
-    &LT;li&GT;Do you like life there?&LT;li&GT;
-    &LT;div&GT;
-    
-    &LT;ol&GT;
-    &LT;p&GT;
-    &LT;div&GT;
-    
-    &LT;div class = "footer "&GT;
-    &LT;footer&GT;
-    &LT;h4&GT; AI is very happy!!!!!&LT;h4&GT;
-    &LT;footer&GT;
-    &LT;div&GT;
-    &LT;script&GT;
-    
-    you want to ask questions about who the person is, and what is some thing that they like.
-    let name;
-    name = prompt&#40;"What is your name"&#41;;
-    console.log&#40;name&#41;;
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-art" role="presentation"></div>
+        <div class="hero-shade" aria-hidden="true"></div>
 
-    let birthday
-    birthday = prompt&#40;name + " what is your birthday?"&#41;;
-    console.log&#40;name + birthday&#41;;
-    
-    let birthplace
-    birthplace = prompt&#40;name + " who is born on " + birthday + " where were you born?"&#41;;
-    console.log&#40;name + birthday + birthplace&#41;;
-    
-    let like
-    like = prompt&#40;name + " who is born on " + birthday + " born in " + birthplace + " do you like living there"&#41;;
-    console.log&#40;name + birthday + birthplace + like&#41;;
-    &LT;script&GT;
-    &LT;body&GT;
-    &LT;html&GT;
-    </pre> 
+        <!-- Decorative code from the original homepage. Escaped text only; never executed. -->
+        <pre class="hero-code" aria-hidden="true"><code><span class="t">&lt;!DOCTYPE html&gt;</span>
+<span class="t">&lt;html</span> <span class="a">lang</span>=<span class="s">"en"</span><span class="t">&gt;</span>
+<span class="t">&lt;head&gt;</span>
+  <span class="t">&lt;meta</span> <span class="a">charset</span>=<span class="s">"UTF-8"</span><span class="t">&gt;</span>
+  <span class="t">&lt;title&gt;</span>Let me know more about you<span class="t">&lt;/title&gt;</span>
+<span class="t">&lt;/head&gt;</span>
+<span class="t">&lt;body&gt;</span>
+  <span class="t">&lt;nav&gt;</span>
+    <span class="t">&lt;ul&gt;</span>
+      <span class="t">&lt;li&gt;&lt;a</span> <span class="a">href</span>=<span class="s">"#"</span><span class="t">&gt;</span>Send email<span class="t">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="t">&lt;/ul&gt;</span>
+  <span class="t">&lt;/nav&gt;</span>
+
+<span class="t">&lt;style&gt;</span>
+  <span class="a">.aboutMe</span> {
+    color: <span class="s">green</span>;
+    text-align: <span class="s">center</span>;
+  }
+  <span class="a">h1</span> {
+    color: <span class="s">red</span>;
+    background-color: <span class="s">slategrey</span>;
+  }
+  <span class="a">.name</span> {
+    color: <span class="s">purple</span>;
+    background-color: <span class="s">rgb(184, 147, 26)</span>;
+  }
+<span class="t">&lt;/style&gt;</span>
+
+  <span class="t">&lt;h1&gt;</span>Who are you and what
+    do you like to do?<span class="t">&lt;/h1&gt;</span>
+  <span class="t">&lt;div</span> <span class="a">class</span>=<span class="s">"aboutme"</span><span class="t">&gt;</span>
+    <span class="t">&lt;p&gt;</span>This is AI counseling,
+      prepare to be questioned.<span class="t">&lt;/p&gt;</span>
+  <span class="t">&lt;/div&gt;</span>
+
+  <span class="t">&lt;ol&gt;</span>
+    <span class="t">&lt;li&gt;</span>What is your name?<span class="t">&lt;/li&gt;</span>
+    <span class="t">&lt;li&gt;</span>What is your birthday?<span class="t">&lt;/li&gt;</span>
+    <span class="t">&lt;li&gt;</span>Where are you from?<span class="t">&lt;/li&gt;</span>
+  <span class="t">&lt;/ol&gt;</span>
+
+  <span class="t">&lt;footer&gt;</span>
+    <span class="t">&lt;h4&gt;</span>AI is very happy!!!!!<span class="t">&lt;/h4&gt;</span>
+  <span class="t">&lt;/footer&gt;</span>
+
+<span class="t">&lt;script&gt;</span>
+  <span class="k">let</span> name;
+  name = prompt(<span class="s">"What is your name"</span>);
+  console.log(name);
+
+  <span class="k">let</span> birthday;
+  birthday = prompt(name +
+    <span class="s">" what is your birthday?"</span>);
+
+  <span class="k">let</span> birthplace;
+  birthplace = prompt(name +
+    <span class="s">" where were you born?"</span>);
+<span class="t">&lt;/script&gt;</span>
+<span class="t">&lt;/body&gt;</span>
+<span class="t">&lt;/html&gt;</span></code></pre>
+
+        <div class="hero-content">
+          <div class="hero-intro">
+            <p class="eyebrow">AI • Software • Innovation</p>
+            <h1 id="hero-title">Jerrod Bolton</h1>
+            <p class="subtitle">Artificial Intelligence &amp; Advancing Computer Science Student</p>
+            <p class="description">Exploring interactive AI and building software.</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="portfolio.html">View Portfolio</a>
+              <a class="btn btn-secondary" href="objectives.html">Degree Objectives</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-projects" aria-labelledby="featured-title">
+        <div class="container">
+          <div class="inner">
+            <div class="section-head">
+              <h2 id="featured-title">Featured Projects</h2>
+              <a href="portfolio.html">All projects →</a>
+            </div>
+            <div class="card-grid">
+              <article class="project-card">
+                <!-- Replace with a real screenshot: <img src="assets/images/animai-kingdom.jpg" alt="…"> -->
+                <div class="shot-placeholder">Screenshot<br />to be added</div>
+                <div>
+                  <h3>Animai Kingdom</h3>
+                  <p>AI desk companion project — my Student Innovation Project.</p>
+                  <a class="read-more" href="projects/animai-kingdom.html">Read more<span class="visually-hidden"> about Animai Kingdom</span></a>
+                </div>
+              </article>
+              <article class="project-card">
+                <div class="shot-placeholder">Screenshot<br />to be added</div>
+                <div>
+                  <h3>Local AI Assistant</h3>
+                  <p>Local AI assistant project.</p>
+                  <a class="read-more" href="projects/local-ai-assistant.html">Read more<span class="visually-hidden"> about the Local AI Assistant</span></a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© 2026 Jerrod Bolton · University of Advancing Technology</div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

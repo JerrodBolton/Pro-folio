@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Degree Objectives — Jerrod Bolton</title>
+    <meta name="description" content="Artificial Intelligence and Advancing Computer Science degree objectives with supporting project evidence." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/objectives.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="index.html" aria-label="Jerrod Bolton, home">JB<span>.</span></a>
+        <nav class="site-nav" aria-label="Main">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">Menu</button>
+          <ul class="nav-list" id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="objectives.html" aria-current="page">Objectives</a></li>
+            <li><a href="sip.html">SIP</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-banner">
+        <div class="hero-art" role="presentation"></div>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="container">
+          <p class="eyebrow">Boards review · Spring 2026 objectives</p>
+          <h1>Degree Objectives</h1>
+          <p>Each card shows an official UAT objective. Flip it to see the projects that support it, then open a project for a closer look.</p>
+          <nav class="jump-links" aria-label="Jump to degree">
+            <a href="#ai">Artificial Intelligence</a>
+            <a href="#acs">Advancing Computer Science</a>
+          </nav>
+        </div>
+      </section>
+
+      <p id="announcer" class="visually-hidden" aria-live="polite"></p>
+
+      <div id="objectives-list" class="container objectives-wrap">
+        <section id="ai" class="degree-section" aria-labelledby="ai-title">
+          <header class="degree-head">
+            <p class="degree-tag">AI</p>
+            <h2 id="ai-title">Artificial Intelligence</h2>
+          </header>
+          <ul class="obj-grid" id="grid-ai"></ul>
+        </section>
+
+        <section id="acs" class="degree-section" aria-labelledby="acs-title">
+          <header class="degree-head">
+            <p class="degree-tag">ACS</p>
+            <h2 id="acs-title">Advancing Computer Science</h2>
+          </header>
+          <ul class="obj-grid" id="grid-acs"></ul>
+        </section>
+
+        <noscript>
+          <div class="panel">
+            <h2>Artificial Intelligence — Degree Objectives</h2>
+            <ol>
+              <li>Create and integrate cognitive artificial intelligence into applications.</li>
+              <li>Create and evolve natural language processing systems.</li>
+              <li>Demonstrate proficiency in designing and developing machine learning systems using industry approaches and patterns.</li>
+              <li>Design and employ deep learning systems using best practices and conventions.</li>
+              <li>Demonstrate a deep understanding of neural networks and their role in creating intelligent systems.</li>
+              <li>Design, create, or integrate reinforcement learning, large language models, and genetic algorithms in intelligent software.</li>
+            </ol>
+            <h2>Advancing Computer Science — Degree Objectives</h2>
+            <ol>
+              <li>Document a software development process to analyze a problem and to design, build and test software solutions.</li>
+              <li>Demonstrate software development skills using more than one programming language and development environment.</li>
+              <li>Implement data-driven solutions.</li>
+              <li>Design and implement software solutions for multiple platforms including mobile devices.</li>
+              <li>Design, develop, and maintain object-oriented software solutions utilizing inheritance, encapsulation, polymorphism, and abstraction.</li>
+              <li>Within software solutions, describe, implement and analyze data structure techniques.</li>
+            </ol>
+            <p class="muted">Turn on JavaScript to see the supporting projects for each objective.</p>
+          </div>
+        </noscript>
+      </div>
+
+      <section id="detail-view" class="container detail-view" hidden aria-labelledby="detail-title">
+        <button id="detail-back" class="btn btn-secondary detail-back" type="button">← Back to objective cards</button>
+        <article id="detail-body" class="detail-body"></article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© 2026 Jerrod Bolton · University of Advancing Technology</div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/objectives-data.js"></script>
+    <script src="assets/js/objectives.js"></script>
+  </body>
+</html>
