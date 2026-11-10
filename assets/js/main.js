@@ -21,7 +21,7 @@
     }
   });
 
-  // Decorative code on the right side of the mobile menu.
+  // Decorative code on the left side of the mobile menu.
   // Plain text only (built with textContent); never executed.
   const CODE = [
     '<!DOCTYPE html>',
