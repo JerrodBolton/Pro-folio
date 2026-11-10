@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/objectives.css" />
   </head>
@@ -16,7 +17,6 @@
 
     <header class="site-header">
       <div class="container">
-        <a class="brand" href="index.html" aria-label="Jerrod Bolton, home">JB<span>.</span></a>
         <nav class="site-nav" aria-label="Main">
           <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">Menu</button>
           <ul class="nav-list" id="nav-list">
@@ -36,19 +36,22 @@
         <div class="hero-art" role="presentation"></div>
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="container">
-          <p class="eyebrow">Boards review · Spring 2026 objectives</p>
-          <h1>Degree Objectives</h1>
-          <p>Each card shows an official UAT objective. Flip it to see the projects that support it, then open a project for a closer look.</p>
-          <nav class="jump-links" aria-label="Jump to degree">
-            <a href="#ai">Artificial Intelligence</a>
-            <a href="#acs">Advancing Computer Science</a>
-          </nav>
+          <img class="banner-logo" src="assets/images/logo-jb.png" alt="" width="400" height="200" />
+          <div class="banner-text">
+            <p class="eyebrow">Boards review · Spring 2026 objectives</p>
+            <h1>Degree Objectives</h1>
+            <nav class="jump-links" aria-label="Jump to degree">
+              <a href="#ai">Artificial Intelligence</a>
+              <a href="#acs">Advancing Computer Science</a>
+            </nav>
+          </div>
         </div>
       </section>
 
       <p id="announcer" class="visually-hidden" aria-live="polite"></p>
 
       <div id="objectives-list" class="container objectives-wrap">
+        <p class="page-intro">Each card shows an official UAT objective. Flip it to see the projects that support it, then open a project for a closer look.</p>
         <section id="ai" class="degree-section" aria-labelledby="ai-title">
           <header class="degree-head">
             <p class="degree-tag">AI</p>

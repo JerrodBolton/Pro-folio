@@ -14,9 +14,9 @@
   --border: rgba(67, 201, 150, 0.45);
   --border-soft: rgba(67, 201, 150, 0.22);
 
-  /* Swap this one line when the approved artwork arrives,
-     e.g. url("../images/hero-space.jpg") */
-  --hero-art: url("../images/hero-space-standin.svg");
+  /* Hero artwork: wide version for desktop, tall version for phones */
+  --hero-art: url("../images/hero-tower.jpg");
+  --hero-art-portrait: url("../images/hero-tower-portrait.jpg");
 
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
@@ -114,6 +114,14 @@ a:hover { color: #ffa866; }
   text-decoration: none;
 }
 .brand span { color: var(--accent); }
+/* Keep the menu on the right on pages without the logo */
+.site-nav { margin-left: auto; }
+.brand img {
+  display: block;
+  height: calc(var(--header-h) - 14px);
+  width: auto;
+  filter: drop-shadow(0 0 6px rgba(67, 201, 150, 0.25));
+}
 
 .nav-toggle {
   display: none;
@@ -223,7 +231,7 @@ a:hover { color: #ffa866; }
   z-index: -3;
   background-image: var(--hero-art);
   background-size: cover;
-  background-position: right 75%;
+  background-position: right top;
 }
 
 /* Darken where text sits; keep the tower side bright */
@@ -236,10 +244,13 @@ a:hover { color: #ffa866; }
     linear-gradient(to top, var(--background) 0%, rgba(9, 13, 12, 0) 30%);
 }
 
-/* Decorative code column — LEFT SIDE ONLY */
+/* Homepage wrapper so the code column can run the full page height */
+.home { position: relative; isolation: isolate; }
+
+/* Decorative code column — LEFT SIDE ONLY, top of hero to bottom of page */
 .hero-code {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   top: 0;
   bottom: 0;
   left: 0;
@@ -319,7 +330,9 @@ a:hover { color: #ffa866; }
 }
 @media (max-width: 600px) {
   .hero { min-height: 0; }
-  .hero-art { background-position: 78% center; }
+    background-image: var(--hero-art-portrait);
+    background-position: 70% 60%;
+  }
   .hero-content { padding-block: 40px 32px; }
 }
 
@@ -419,7 +432,10 @@ a:hover { color: #ffa866; }
   padding: 44px 0 36px;
   border-bottom: 1px solid var(--border-soft);
 }
-.page-banner .hero-art { background-position: right 30%; }
+.page-banner .hero-art {
+  background-image: var(--hero-art);
+  background-position: right 30%;
+}
 .page-banner .hero-shade {
   background: linear-gradient(90deg, rgba(9, 13, 12, 0.97) 0%, rgba(9, 13, 12, 0.85) 45%, rgba(9, 13, 12, 0.35) 100%);
 }
@@ -429,7 +445,31 @@ a:hover { color: #ffa866; }
   font-size: clamp(2rem, 4vw, 2.8rem);
   line-height: 1.1;
 }
+.page-banner .container {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: clamp(24px, 4vw, 56px);
+}
+.page-banner .banner-logo {
+  display: block;
+  width: clamp(120px, 14vw, 200px);
+  height: auto;
+  filter: drop-shadow(0 0 8px rgba(67, 201, 150, 0.3));
+}
+@media (max-width: 600px) {
+  .page-banner .container { grid-template-columns: 1fr; row-gap: 16px; }
+  .page-banner .banner-logo { width: 120px; }
+}
 .page-banner p { margin: 0; color: var(--text-muted); max-width: 62ch; }
+
+/* Page description, shown above the first panel on inner pages */
+.page-intro {
+  margin: 0 0 24px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
 
 .panel {
   background: var(--surface);

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
@@ -15,7 +16,7 @@
 
     <header class="site-header">
       <div class="container">
-        <a class="brand" href="index.html" aria-label="Jerrod Bolton, home">JB<span>.</span></a>
+        <a class="brand" href="index.html" aria-label="Jerrod Bolton, home"><img src="assets/images/Emerald JB lightning logo.png" alt="" width="400" height="200" /></a>
         <nav class="site-nav" aria-label="Main">
           <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">Menu</button>
           <ul class="nav-list" id="nav-list">
@@ -30,13 +31,9 @@
       </div>
     </header>
 
-    <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-art" role="presentation"></div>
-        <div class="hero-shade" aria-hidden="true"></div>
-
-        <!-- Decorative code from the original homepage. Escaped text only; never executed. -->
-        <pre class="hero-code" aria-hidden="true"><code><span class="t">&lt;!DOCTYPE html&gt;</span>
+    <main id="main" class="home">
+      <!-- Decorative code from the original homepage. Escaped text only; never executed. -->
+      <pre class="hero-code" aria-hidden="true"><code><span class="t">&lt;!DOCTYPE html&gt;</span>
 <span class="t">&lt;html</span> <span class="a">lang</span>=<span class="s">"en"</span><span class="t">&gt;</span>
 <span class="t">&lt;head&gt;</span>
   <span class="t">&lt;meta</span> <span class="a">charset</span>=<span class="s">"UTF-8"</span><span class="t">&gt;</span>
@@ -96,12 +93,16 @@
 <span class="t">&lt;/script&gt;</span>
 <span class="t">&lt;/body&gt;</span>
 <span class="t">&lt;/html&gt;</span></code></pre>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-art" role="presentation"></div>
+        <div class="hero-shade" aria-hidden="true"></div>
+
 
         <div class="hero-content">
           <div class="hero-intro">
             <p class="eyebrow">AI • Software • Innovation</p>
             <h1 id="hero-title">Jerrod Bolton</h1>
-            <p class="subtitle">Artificial Intelligence &amp; Advancing Computer Science Student</p>
+            <p class="subtitle">Artificial Intelligence &amp; Advancing Computer Science</p>
             <p class="description">Exploring interactive AI and building software.</p>
             <div class="btn-row">
               <a class="btn btn-primary" href="portfolio.html">View Portfolio</a>
@@ -143,7 +144,7 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container">© 2026 Jerrod Bolton · University of Advancing Technology</div>
+      <div class="container">© 2026 Jerrod Bolton · All rights reserved.</div>
     </footer>
 
     <script src="assets/js/main.js"></script>

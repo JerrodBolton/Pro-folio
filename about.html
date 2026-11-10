@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
@@ -14,7 +15,6 @@
 
     <header class="site-header">
       <div class="container">
-        <a class="brand" href="index.html" aria-label="Jerrod Bolton, home">JB<span>.</span></a>
         <nav class="site-nav" aria-label="Main">
           <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">Menu</button>
           <ul class="nav-list" id="nav-list">
@@ -34,27 +34,35 @@
         <div class="hero-art" role="presentation"></div>
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="container">
-          <p class="eyebrow">About</p>
-          <h1>About Me</h1>
-          <p>I’m an Artificial Intelligence and Advancing Computer Science student at the University of Advancing Technology. My experience includes recruitment outreach, teaching software engineering, supporting IT procurement, and leading AI projects.</p>
+          <img class="banner-logo" src="assets/images/logo-jb.png" alt="" width="400" height="200" />
+          <div class="banner-text">
+            <p class="eyebrow">About</p>
+            <h1>About Me</h1>
+          </div>
         </div>
       </section>
 
       <div class="container" style="padding-top:32px;padding-bottom:72px;max-width:900px">
+        <p class="page-intro">I’m an Artificial Intelligence and Advancing Computer Science student at the University of Advancing Technology. My experience includes recruitment outreach, teaching software engineering, supporting IT procurement, and leading AI projects.</p>
         <section class="panel">
           <h2>Background</h2>
           <!-- Add Jerrod's portrait here when he supplies the photo. -->
           <p>I enjoy making technical concepts easier to understand, whether I’m teaching beginners or working with a project team. I’m interested in helping people see how AI and automation can solve practical problems.</p>
-          <p class="muted">University of Advancing Technology, Tempe, Arizona · Expected graduation May 2027</p>
+        </section>
+        <section class="panel">
+          <h2>Education</h2>
+          <p>University of Advancing Technology, Tempe, Arizona · Expected graduation May 2027</p>
         </section>
         <section class="panel">
           <h2>Skills and experience</h2>
           <p>My technical work includes Python, JavaScript, Java, React, and Firebase. I’ve taught software engineering at Persevere, supported IT procurement with Arizona ASET, and led Animai Kingdom, a team project to develop an AI desk companion.</p>
         </section>
         <section class="panel">
-          <h2>Connect</h2>
+          <h2>Resume</h2>
           <div class="btn-row">
-            <a class="btn btn-primary" href="https://www.linkedin.com/in/jerrodbolton/">Connect on LinkedIn</a>
+            <!-- Public resume only: phone number and email removed. Place it at assets/documents/Jerrod-Bolton-Public-Resume.pdf -->
+            <a class="btn btn-primary" href="assets/documents/Jerrod-Bolton-Public-Resume.pdf" download>Download Resume (PDF)</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/jerrodbolton/">Connect on LinkedIn</a>
           </div>
         </section>
       </div>

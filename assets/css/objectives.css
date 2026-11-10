@@ -289,3 +289,6 @@
   .obj-inner { transition: none !important; }
   .detail-view.is-entering { animation: none; }
 }
+
+/* Give the page description room below the banner */
+.objectives-wrap > .page-intro { margin-top: 24px; }
