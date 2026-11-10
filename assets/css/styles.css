@@ -369,12 +369,23 @@ a:hover { color: #ffa866; }
       linear-gradient(to top, var(--background) 0%, rgba(9, 13, 12, 0) 35%);
   }
 }
+/* Phones: tall astronaut artwork, text over the dark sky at the top,
+   scene left clear underneath */
 @media (max-width: 600px) {
-  .hero { min-height: 0; }
-    background-image: var(--hero-art-portrait);
-    background-position: center 62%;
+  .hero {
+    min-height: min(88svh, 760px);
+    align-items: flex-start;
   }
-  .hero-content { padding-block: 40px 32px; }
+  .hero-art {
+    background-image: var(--hero-art-portrait);
+    background-position: center bottom;
+  }
+  .hero-shade {
+    background:
+      linear-gradient(to bottom, rgba(9, 13, 12, 0.8) 0%, rgba(9, 13, 12, 0.45) 32%, rgba(9, 13, 12, 0) 50%),
+      linear-gradient(to top, var(--background) 0%, rgba(9, 13, 12, 0) 14%);
+  }
+  .hero-content { padding-block: 32px 32px; }
 }
 
 /* ---------- Featured projects ---------- */
