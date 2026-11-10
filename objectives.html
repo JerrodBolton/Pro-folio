@@ -94,13 +94,16 @@
       </div>
 
       <section id="detail-view" class="container detail-view" hidden aria-labelledby="detail-title">
-        <button id="detail-back" class="btn btn-secondary detail-back" type="button">← Back to objective cards</button>
         <article id="detail-body" class="detail-body"></article>
+        <!-- Stays pinned to the bottom of the screen while scrolling the details -->
+        <div class="detail-back-dock">
+          <button class="btn btn-primary detail-back-bottom" type="button">← Back to objective cards</button>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container">© 2026 Jerrod Bolton · University of Advancing Technology</div>
+      <div class="container">© 2026 Jerrod Bolton · All rights reserved.</div>
     </footer>
 
     <script src="assets/js/main.js"></script>

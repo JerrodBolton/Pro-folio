@@ -223,7 +223,23 @@
   to { opacity: 1; transform: scale(1); }
 }
 
-.detail-back { margin-bottom: 22px; }
+/* Bottom back button: pinned to the screen bottom while scrolling,
+   then rests under the details at the end */
+.detail-back-dock {
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+  padding: 14px 0 18px;
+  background: linear-gradient(to top, var(--background) 55%, rgba(9, 13, 12, 0));
+  pointer-events: none;
+}
+.detail-back-bottom {
+  pointer-events: auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
 
 .detail-body {
   background: var(--surface);
@@ -269,6 +285,7 @@
   border: 1px solid var(--border-soft);
 }
 .detail-section:first-child { grid-column: 1 / -1; border-color: var(--border); }
+.detail-section:last-child { grid-column: 1 / -1; }
 .detail-section h3 {
   margin: 0 0 6px;
   font-size: 0.95rem;

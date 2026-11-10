@@ -46,7 +46,6 @@ const PROJECTS = {
     page: "projects/animai-kingdom.html",
     contribution: "",
     tools: "",
-    decisions: "",
     evidence: [
       // { type: "Screenshot", label: "Companion home screen", href: "assets/images/animai-home.jpg" },
       // { type: "Demo video", label: "Two-minute walkthrough", href: "https://…" },
@@ -61,7 +60,6 @@ const PROJECTS = {
     page: "projects/local-ai-assistant.html",
     contribution: "",
     tools: "",
-    decisions: "",
     evidence: [],
     results: "",
     reflection: "",
@@ -72,7 +70,6 @@ const PROJECTS = {
     page: "",
     contribution: "",
     tools: "",
-    decisions: "",
     evidence: [],
     results: "",
     reflection: "",

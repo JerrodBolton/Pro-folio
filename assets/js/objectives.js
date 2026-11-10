@@ -4,7 +4,6 @@
   const listView = document.getElementById("objectives-list");
   const detailView = document.getElementById("detail-view");
   const detailBody = document.getElementById("detail-body");
-  const backBtn = document.getElementById("detail-back");
   const announcer = document.getElementById("announcer");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
@@ -188,12 +187,10 @@
         el("p", { text: degree.items[num - 1] })),
       el("div", { class: "detail-status" }, statusBadge(match.status)),
       el("div", { class: "detail-grid" },
-        detailSection("Connection to this objective", match.connection),
         detailSection("Purpose", project.summary),
         detailSection("My contribution", project.contribution),
         detailSection("Tools", project.tools),
-        detailSection("Decisions", project.decisions),
-        detailSection("Evidence — screenshots, demos, source, PDFs", project.evidence),
+        detailSection("Evidence", project.evidence),
         detailSection("Results", project.results),
         detailSection("Reflection", project.reflection)),
       project.page
@@ -226,7 +223,7 @@
     announce("Back to objective cards");
   }
 
-  backBtn.addEventListener("click", closeDetail);
+  detailView.querySelector(".detail-back-bottom").addEventListener("click", closeDetail);
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !detailView.hidden) closeDetail();
   });
