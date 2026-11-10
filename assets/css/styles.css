@@ -15,8 +15,9 @@
   --border-soft: rgba(67, 201, 150, 0.22);
 
   /* Hero artwork: wide version for desktop, tall version for phones */
-  --hero-art: url("../images/hero-tower.jpg");
-  --hero-art-portrait: url("../images/hero-tower-portrait.jpg");
+  --hero-art: url("../images/hero-astronaut.jpg");
+  --hero-art-portrait: url("../images/hero-astronaut-portrait.jpg");
+  --banner-art: url("../images/banner-nebula.jpg");
 
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
@@ -26,6 +27,8 @@
   --max: 1200px;
   --gutter: clamp(16px, 4vw, 40px);
   --header-h: 68px;
+  /* Width of the decorative code column on the homepage */
+  --code-col: clamp(190px, 15vw, 250px);
 }
 
 *,
@@ -219,7 +222,8 @@ a:hover { color: #ffa866; }
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  min-height: min(64vh, 620px);
+  /* Matches the 3:1 artwork so the whole picture shows (zoomed out) */
+  min-height: clamp(420px, 33.34vw, 640px);
   display: flex;
   align-items: center;
   background-color: var(--background);
@@ -231,7 +235,7 @@ a:hover { color: #ffa866; }
   z-index: -3;
   background-image: var(--hero-art);
   background-size: cover;
-  background-position: right top;
+  background-position: right center;
 }
 
 /* Darken where text sits; keep the tower side bright */
@@ -240,7 +244,7 @@ a:hover { color: #ffa866; }
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(90deg, rgba(9, 13, 12, 0.96) 0%, rgba(9, 13, 12, 0.86) 30%, rgba(9, 13, 12, 0.45) 55%, rgba(9, 13, 12, 0) 75%),
+    linear-gradient(90deg, rgba(9, 13, 12, 0.96) 0%, rgba(9, 13, 12, 0.88) 30%, rgba(9, 13, 12, 0.6) 50%, rgba(9, 13, 12, 0.2) 66%, rgba(9, 13, 12, 0) 80%),
     linear-gradient(to top, var(--background) 0%, rgba(9, 13, 12, 0) 30%);
 }
 
@@ -254,12 +258,12 @@ a:hover { color: #ffa866; }
   top: 0;
   bottom: 0;
   left: 0;
-  width: clamp(240px, 22vw, 340px);
+  width: var(--code-col);
   margin: 0;
   padding: 28px 0 28px var(--gutter);
   overflow: hidden;
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.65;
   color: #8fa59b;
   opacity: 0.22;
@@ -281,10 +285,14 @@ a:hover { color: #ffa866; }
   margin: 0 auto;
   padding: 48px var(--gutter);
   /* reserve the code column on desktop */
-  padding-left: calc(clamp(240px, 22vw, 340px) + 32px);
+  padding-left: calc(var(--code-col) + 24px);
 }
 
-.hero-intro { max-width: 560px; }
+.hero-intro {
+  max-width: 560px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+}
+.hero-intro .btn { text-shadow: none; }
 
 .eyebrow {
   margin: 0 0 10px;
@@ -331,7 +339,7 @@ a:hover { color: #ffa866; }
 @media (max-width: 600px) {
   .hero { min-height: 0; }
     background-image: var(--hero-art-portrait);
-    background-position: 70% 60%;
+    background-position: center 62%;
   }
   .hero-content { padding-block: 40px 32px; }
 }
@@ -355,7 +363,7 @@ a:hover { color: #ffa866; }
 
 .home-projects .container { max-width: 1400px; }
 .home-projects .section-head { max-width: 880px; }
-.home-projects .inner { padding-left: calc(clamp(240px, 22vw, 340px) + 32px - var(--gutter)); }
+.home-projects .inner { padding-left: calc(var(--code-col) + 24px - var(--gutter)); }
 @media (max-width: 1000px) { .home-projects .section-head { max-width: 880px; }
 .home-projects .inner { padding-left: 0; } }
 
@@ -433,11 +441,12 @@ a:hover { color: #ffa866; }
   border-bottom: 1px solid var(--border-soft);
 }
 .page-banner .hero-art {
-  background-image: var(--hero-art);
-  background-position: right 30%;
+  background-image: var(--banner-art);
+  background-position: left center;
 }
 .page-banner .hero-shade {
-  background: linear-gradient(90deg, rgba(9, 13, 12, 0.97) 0%, rgba(9, 13, 12, 0.85) 45%, rgba(9, 13, 12, 0.35) 100%);
+  /* Light touch: the nebula backdrop is already dark */
+  background: linear-gradient(90deg, rgba(9, 13, 12, 0) 0%, rgba(9, 13, 12, 0.25) 100%);
 }
 .page-banner h1 {
   margin: 0 0 8px;
