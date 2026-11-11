@@ -23,7 +23,7 @@
             <li><a href="index.html" aria-current="page">Home</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="objectives.html">Objectives</a></li>
-            <li><a href="sip.html">SIP</a></li>
+            <li><a href="http://animaikingdom.com" data-animai-link>SIP<span class="visually-hidden">: Animai Kingdom website</span></a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
@@ -120,15 +120,16 @@
               <a href="portfolio.html">All projects →</a>
             </div>
             <div class="card-grid">
-              <article class="project-card">
-                <!-- Replace with a real screenshot: <img src="assets/images/animai-kingdom.jpg" alt="…"> -->
-                <div class="shot-placeholder">Screenshot<br />to be added</div>
+              <!-- The whole card links to the official Animai Kingdom website (see assets/js/site-config.js) -->
+              <a class="project-card project-card-link" href="http://animaikingdom.com" data-animai-link>
+                <!-- Replace with a real screenshot: <img src="assets/images/animai-kingdom.jpg" alt=""> -->
+                <div class="shot-placeholder" aria-hidden="true">Screenshot<br />to be added</div>
                 <div>
                   <h3>Animai Kingdom</h3>
                   <p>AI desk companion project — my Student Innovation Project.</p>
-                  <a class="read-more" href="projects/animai-kingdom.html">Read more<span class="visually-hidden"> about Animai Kingdom</span></a>
+                  <span class="read-more">Visit the Animai Kingdom website</span>
                 </div>
-              </article>
+              </a>
               <article class="project-card">
                 <div class="shot-placeholder">Screenshot<br />to be added</div>
                 <div>
@@ -146,6 +147,8 @@
     <footer class="site-footer">
       <div class="container">© 2026 Jerrod Bolton · All rights reserved.</div>
     </footer>
+
+    <script src="assets/js/site-config.js"></script>
 
     <script src="assets/js/main.js"></script>
   </body>

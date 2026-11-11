@@ -3,100 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Animai Kingdom (SIP) now lives on its own website. This page only
+         forwards old links there. The URL is set in assets/js/site-config.js;
+         the meta refresh below is the no-JavaScript fallback. -->
+    <meta http-equiv="refresh" content="0; url=http://animaikingdom.com" />
+    <link rel="canonical" href="http://animaikingdom.com" />
     <title>Animai Kingdom — Jerrod Bolton</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script src="../assets/js/site-config.js"></script>
+    <script>
+      location.replace(window.SITE_CONFIG.ANIMAI_KINGDOM_URL);
+    </script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
-    <header class="site-header">
-      <div class="container">
-        <nav class="site-nav" aria-label="Main">
-          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">Menu</button>
-          <ul class="nav-list" id="nav-list">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../portfolio.html" aria-current="page">Portfolio</a></li>
-            <li><a href="../objectives.html">Objectives</a></li>
-            <li><a href="../sip.html">SIP</a></li>
-            <li><a href="../about.html">About Me</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main id="main">
-      <section class="page-banner">
-        <div class="hero-art" role="presentation"></div>
-        <div class="hero-shade" aria-hidden="true"></div>
-        <div class="container">
-          <img class="banner-logo" src="../assets/images/logo-jb.png" alt="" width="400" height="200" />
-          <div class="banner-text">
-            <p class="eyebrow">Project · SIP</p>
-            <h1>Animai Kingdom</h1>
-          </div>
-        </div>
-      </section>
-
-      <div class="container" style="padding-top:32px;padding-bottom:72px;max-width:900px">
-        <p><span class="dev-tag">In development</span></p>
-        <p class="page-intro">AI desk companion project.</p>
-        <section class="panel">
-          <h2>1. Purpose</h2>
-          <p class="muted">What it does and which problem it solves.</p>
-          <p><span class="dev-tag">Evidence to be added</span></p>
-        </section>
-        <section class="panel">
-          <h2>2. Status</h2>
-          <p class="muted">Working features and planned features, clearly separated.</p>
-          <p><span class="dev-tag">Evidence to be added</span></p>
-        </section>
-        <section class="panel">
-          <h2>3. My contribution</h2>
-          <p class="muted">What I personally designed or built.</p>
-          <p><span class="dev-tag">Evidence to be added</span></p>
-        </section>
-        <section class="panel">
-          <h2>4. Team</h2>
-          <p class="muted">Contributors and their roles, if applicable.</p>
-          <p><span class="dev-tag">Evidence to be added</span></p>
-        </section>
-        <section class="panel">
-          <h2>5. Tools</h2>
-          <p class="muted">Verified languages, libraries, hardware, and services.</p>
-          <p><span class="dev-tag">Evidence to be added</span></p>
-        </section>
-        <section class="panel">
-          <h2>6. Decisions</h2>
-          <p class="muted">Why I chose this approach.</p>
-          <p><span class="dev-tag">Evidence to be added</span></p>
-        </section>
-        <section class="panel">
-          <h2>7. Evidence</h2>
-          <p class="muted">Screenshots, demo videos, source code, and PDFs.</p>
-          <p><span class="dev-tag">Evidence to be added</span></p>
-        </section>
-        <section class="panel">
-          <h2>8. Results and reflection</h2>
-          <p class="muted">Outcomes, challenges, lessons, and next improvements.</p>
-          <p><span class="dev-tag">Evidence to be added</span></p>
-        </section>
-        <section class="panel">
-          <h2>9. Objectives supported</h2>
-          <p class="muted">Objective numbers (e.g. AI Objective 1) and how this project connects to each.</p>
-          <p><span class="dev-tag">Evidence to be added</span></p>
-        </section>
-      </div>
+    <main id="main" class="container" style="padding-top:72px;padding-bottom:72px;max-width:900px">
+      <h1>Animai Kingdom</h1>
+      <p>Animai Kingdom, my Student Innovation Project, has its own website. <a href="http://animaikingdom.com" data-animai-link>Go to the Animai Kingdom website</a>.</p>
     </main>
-
-    <footer class="site-footer">
-      <div class="container">© 2026 Jerrod Bolton · All rights reserved.</div>
-    </footer>
-
-    <script src="../assets/js/main.js"></script>
   </body>
 </html>

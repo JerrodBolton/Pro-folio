@@ -1,3 +1,13 @@
+// Point every SIP / Animai Kingdom link at the one shared URL
+// (window.SITE_CONFIG in site-config.js). Opens in the current tab.
+(function () {
+  const url = window.SITE_CONFIG && window.SITE_CONFIG.ANIMAI_KINGDOM_URL;
+  if (!url) return;
+  document.querySelectorAll("a[data-animai-link]").forEach((a) => {
+    a.href = url;
+  });
+})();
+
 // Mobile navigation toggle (shared by every page)
 (function () {
   const nav = document.querySelector(".site-nav");

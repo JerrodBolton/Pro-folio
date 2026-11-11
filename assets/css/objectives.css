@@ -161,6 +161,9 @@
   font-size: 0.85rem;
 }
 .detail-btn:hover { background: #ffa05a; }
+.detail-link { display: inline-block; text-decoration: none; }
+.detail-link:hover { color: #160b02; }
+.detail-link::after { content: " →"; }
 
 .match-list {
   list-style: none;

@@ -63,16 +63,25 @@
     } else {
       matches.forEach((m) => {
         const p = PROJECTS[m.project];
+        const name = p ? p.title : m.project;
+        // Projects with their own website (Animai Kingdom) link straight to it
+        const title = p && p.externalUrl
+          ? el("a", { href: p.externalUrl, text: name })
+          : name;
+        const action = p && p.externalUrl
+          ? el("a", { class: "detail-btn detail-link", href: p.externalUrl },
+              el("span", { text: `Visit the ${name} website` }))
+          : el("button", {
+              class: "detail-btn", type: "button",
+              "data-action": "detail", "data-key": key, "data-project": m.project,
+            }, el("span", { text: "View details" }),
+               el("span", { class: "visually-hidden", text: ` for ${name}, ${label}` }));
         backList.append(el("li", { class: "match" },
           el("div", { class: "match-head" },
-            el("p", { class: "match-title", text: p ? p.title : m.project }),
+            el("p", { class: "match-title" }, title),
             statusBadge(m.status)),
           el("p", { class: "match-connection", text: m.connection }),
-          el("button", {
-            class: "detail-btn", type: "button",
-            "data-action": "detail", "data-key": key, "data-project": m.project,
-          }, el("span", { text: "View details" }),
-             el("span", { class: "visually-hidden", text: ` for ${p ? p.title : m.project}, ${label}` }))));
+          action));
       });
     }
     const unflipBtn = el("button", { class: "unflip-btn", type: "button", "data-action": "unflip" },

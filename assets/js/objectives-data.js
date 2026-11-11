@@ -43,7 +43,10 @@ const PROJECTS = {
   "animai-kingdom": {
     title: "Animai Kingdom",
     summary: "AI desk companion project — my Student Innovation Project.",
-    page: "projects/animai-kingdom.html",
+    // Has its own website: objective entries link straight there
+    // instead of opening the detail view. URL lives in site-config.js.
+    externalUrl: (window.SITE_CONFIG || {}).ANIMAI_KINGDOM_URL || "http://animaikingdom.com",
+    page: "",
     contribution: "",
     tools: "",
     evidence: [
