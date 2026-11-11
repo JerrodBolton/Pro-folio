@@ -58,8 +58,8 @@ const PROJECTS = {
     reflection: "",
   },
   "local-ai-assistant": {
-    title: "Local AI Assistant",
-    summary: "Local AI assistant project. (Working title — confirm the current name.)",
+    title: "VORTEXA",
+    summary: "Local AI assistant project.",
     page: "projects/local-ai-assistant.html",
     contribution: "",
     tools: "",

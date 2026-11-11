@@ -574,3 +574,36 @@ a:hover { color: #ffa866; }
 .project-card-link .read-more { color: var(--accent); }
 .project-card-link:hover .read-more { color: #ffa866; text-decoration: underline; }
 .project-card-link:focus-visible { border-radius: var(--radius); }
+
+/* Project logos (Animai Kingdom) */
+.project-logo {
+  width: 100%;
+  height: auto;
+  align-self: center;
+  justify-self: center;
+  aspect-ratio: 600 / 451;
+  object-fit: contain;
+}
+.panel-with-logo {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 20px;
+  align-items: center; /* logo centered top-to-bottom beside the text */
+}
+.panel-logo { display: block; justify-self: center; width: 100%; }
+.panel-logo img { width: 100%; height: auto; }
+.panel-body > :last-child { margin-bottom: 0; }
+@media (max-width: 480px) {
+  .panel-with-logo { grid-template-columns: 1fr; gap: 12px; }
+  .panel-logo { width: 200px; } /* stacked: logo centered above the text */
+}
+/* Round logos (VORTEXA) */
+.project-logo-square { aspect-ratio: 1 / 1; border-radius: 50%; width: 82%; }
+.logo-square { border-radius: 50%; }
+.project-page-logo { display: block; width: min(240px, 70%); height: auto; margin: 8px auto 24px; }
+/* Card text lines up with the middle of the project logo */
+.project-card { align-items: center; }
+.project-card > div > :last-child { margin-bottom: 0; }
+/* Project page header: tag, logo, and intro all centered */
+.project-page-head { text-align: center; }
+.project-page-head .page-intro { margin-left: auto; margin-right: auto; }
