@@ -46,17 +46,18 @@
         <div class="project-page-head">
         <p><span class="dev-tag">In development</span></p>
         <img class="project-page-logo logo-square" src="../assets/project-logos/vortexa-logo-web.jpg" alt="VORTEXA logo" width="600" height="600" />
-        <p class="page-intro">Local AI assistant project.</p>
+        <p class="page-intro">Desktop local-LLM assistant with a chat interface, model switching and session conversation history.</p>
         </div>
         <section class="panel">
           <h2>1. Purpose</h2>
           <p class="muted">What it does and which problem it solves.</p>
-          <p><span class="dev-tag">Evidence to be added</span></p>
+          <p>Desktop local-LLM assistant with a chat interface, model switching and session conversation history.</p>
         </section>
         <section class="panel">
           <h2>2. Status</h2>
           <p class="muted">Working features and planned features, clearly separated.</p>
-          <p><span class="dev-tag">Evidence to be added</span></p>
+          <p><strong>In the source code now:</strong> a modular GUI, worker threads and queues, model loading and streamed responses. It prefers the Dolphin3.0-Llama3.1-8B GGUF model and falls back to other GGUF files it finds. It also has a system persona, recent message history and token-budget trimming.</p>
+          <p><strong>Still to do:</strong> confirm the installed model, hardware and dependencies, run it end to end, and save before/after tests of its language behavior.</p>
         </section>
         <section class="panel">
           <h2>3. My contribution</h2>
@@ -71,7 +72,7 @@
         <section class="panel">
           <h2>5. Tools</h2>
           <p class="muted">Verified languages, libraries, hardware, and services.</p>
-          <p><span class="dev-tag">Evidence to be added</span></p>
+          <p>Python, CustomTkinter, llama-cpp-python, Pillow; GGUF models</p>
         </section>
         <section class="panel">
           <h2>6. Decisions</h2>
@@ -81,7 +82,13 @@
         <section class="panel">
           <h2>7. Evidence</h2>
           <p class="muted">Screenshots, demo videos, source code, and PDFs.</p>
-          <p><span class="dev-tag">Evidence to be added</span></p>
+          <ul>
+            <li><a href="https://github.com/JerrodBolton/Python-II-class">GitHub repository</a></li>
+            <li><a href="https://github.com/JerrodBolton/Python-II-class/blob/11bb8112f01da9d7c5331e08954aa438f09e5ba1/Vortexa%20IIII/main.py">Source code: Vortexa IIII/main.py</a></li>
+            <li><a href="https://github.com/JerrodBolton/Python-II-class/blob/11bb8112f01da9d7c5331e08954aa438f09e5ba1/Vortexa%20IIII/llm.py">Source code: Vortexa IIII/llm.py</a></li>
+            <li><a href="https://github.com/JerrodBolton/Python-II-class/blob/11bb8112f01da9d7c5331e08954aa438f09e5ba1/Vortexa%20IIII/hub.py">Source code: Vortexa IIII/hub.py</a></li>
+            <li><a href="https://github.com/JerrodBolton/Python-II-class/blob/11bb8112f01da9d7c5331e08954aa438f09e5ba1/Vortexa%20IIII/requirements.txt">Dependencies: Vortexa IIII/requirements.txt</a></li>
+          </ul>
         </section>
         <section class="panel">
           <h2>8. Results and reflection</h2>
@@ -91,7 +98,8 @@
         <section class="panel">
           <h2>9. Objectives supported</h2>
           <p class="muted">Objective numbers (e.g. AI Objective 1) and how this project connects to each.</p>
-          <p><span class="dev-tag">Evidence to be added</span></p>
+          <p><strong>AI Objective 2</strong> (suggested): the code generates local chat replies and keeps conversation history. Still needs measured evidence that the language handling improved.</p>
+          <p><strong>AI Objective 6</strong> (suggested): the code integrates an LLM. Still needs my contribution and a recorded run.</p>
         </section>
       </div>
     </main>

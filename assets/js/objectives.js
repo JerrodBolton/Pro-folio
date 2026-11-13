@@ -168,7 +168,8 @@
   function detailSection(title, content) {
     const empty = !content || (Array.isArray(content) && content.length === 0);
     const body = empty
-      ? el("p", { class: "evidence-missing", text: "Evidence to be added" })
+      ? el("p", { class: "evidence-missing",
+          text: Array.isArray(content) ? "Source evidence to be added" : "Evidence to be added" })
       : Array.isArray(content)
         ? el("ul", { class: "evidence-list" }, content.map((ev) =>
             el("li", {}, el("span", { class: "ev-type", text: ev.type }), " ",
