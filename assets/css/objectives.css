@@ -153,6 +153,19 @@
   border: 1px solid rgba(185, 194, 188, 0.4);
 }
 .unflip-btn:hover { color: var(--text); }
+
+/* Flip-back button rides along the bottom of the screen while you scroll
+   through a card's projects, then settles at the end of the card. */
+.obj-back .obj-actions {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  margin: auto -22px -22px;
+  padding: 18px 22px 22px;
+  border-radius: 0 0 var(--radius) var(--radius);
+  background: linear-gradient(to top, var(--surface-raised) 60%, rgba(19, 33, 27, 0));
+}
+.obj-back .unflip-btn { background: var(--surface-raised); }
 .detail-btn {
   background: var(--accent);
   color: #160b02;
@@ -164,6 +177,18 @@
 .detail-link { display: inline-block; text-decoration: none; }
 .detail-link:hover { color: #160b02; }
 .detail-link::after { content: " →"; }
+/* Website button + source-code link side by side; stacks on narrow cards */
+.match-links { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+.source-link {
+  display: inline-block;
+  padding: 6px 0;
+  font-size: 0.85rem;
+  color: var(--text);
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+.source-link:hover { color: var(--accent); }
+.source-link::after { content: " ↗"; }
 
 .match-list {
   list-style: none;
@@ -312,3 +337,42 @@
 
 /* Give the page description room below the banner */
 .objectives-wrap > .page-intro { margin-top: 24px; }
+
+/* ---------- Flip-all button: floats at the bottom-right of the screen ---------- */
+.flip-all-btn {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 20;
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #160b02;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  transition: background 0.2s, transform 0.2s;
+}
+.flip-all-btn::after { content: " ↻"; }
+.flip-all-btn:hover { background: #ffa25f; transform: translateY(-1px); }
+.flip-all-btn[data-state="back"] {
+  background: var(--surface-raised);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.flip-all-btn[data-state="back"]:hover { background: #1b2d25; }
+/* Hidden until the cards exist */
+html:not(.js-ready) .flip-all-btn { display: none; }
+.flip-all-short { display: none; }
+@media (max-width: 520px) {
+  .flip-all-btn { padding: 11px 16px; }
+  /* Full wording stays available to screen readers */
+  .flip-all-label {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap;
+  }
+  .flip-all-short { display: inline; }
+}

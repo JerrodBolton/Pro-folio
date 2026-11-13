@@ -42,17 +42,19 @@ const OBJECTIVES = {
 const PROJECTS = {
   "animai-kingdom": {
     title: "Animai Kingdom",
-    summary: "AI desk companion project — my Student Innovation Project.",
+    summary: "An AI animal companion designed for conversation, productivity, motivation and brainstorming. Status: Prototype — in development.",
     // Has its own website: objective entries link straight there
     // instead of opening the detail view. URL lives in site-config.js.
     externalUrl: (window.SITE_CONFIG || {}).ANIMAI_KINGDOM_URL || "http://animaikingdom.com",
+    // Public prototype repository, shown as a second link on objective cards
+    sourceUrl: "https://github.com/JerrodBolton/Animai",
     page: "",
     contribution: "",
     tools: "",
     evidence: [
-      // { type: "Screenshot", label: "Companion home screen", href: "assets/images/animai-home.jpg" },
-      // { type: "Demo video", label: "Two-minute walkthrough", href: "https://…" },
-      // { type: "Source code", label: "GitHub repository", href: "https://github.com/…" },
+      { type: "Website", label: "Animai Kingdom", href: (window.SITE_CONFIG || {}).ANIMAI_KINGDOM_URL || "http://animaikingdom.com" },
+      { type: "GitHub", label: "Public prototype repository", href: "https://github.com/JerrodBolton/Animai" },
+      { type: "Source code", label: "main_app.py (reviewed version)", href: "https://github.com/JerrodBolton/Animai/blob/1cfc5b48cf777261e24281b416a186874220750c/main_app.py" },
     ],
     results: "",
     reflection: "",
@@ -398,7 +400,9 @@ const PROJECTS = {
 };
 
 /* Key format: "<degree>-<number>", e.g. "ai-1", "acs-6".
-   Two projects per objective, from README-Boards-Project-Plan.md (Nov 12, 2026).
+   Two projects per objective, from README-Boards-Project-Plan.md (Nov 12, 2026),
+   except AI 1, AI 2 and ACS 1, which have three: Animai Kingdom is the
+   one project allowed three objective placements.
    Every match is still a SUGGESTION — keep status "suggested" until the
    objective evidence and personal contribution have been reviewed. */
 const MAPPINGS = {
@@ -411,7 +415,12 @@ const MAPPINGS = {
     {
       "project": "greenspires",
       "status": "suggested",
-      "connection": "AI reflection replies are planned; mobile prototype source is available."
+      "connection": "AI journaling feature is planned; the AI integration must be implemented and demonstrated."
+    },
+    {
+      "project": "animai-kingdom",
+      "status": "suggested",
+      "connection": "Integrates conversational AI, character personalities, and speech features into a companion application."
     }
   ],
   "ai-2": [
@@ -424,6 +433,11 @@ const MAPPINGS = {
       "project": "python-speech-to-text",
       "status": "suggested",
       "connection": "Transcription prototype exists; add before/after accuracy evaluation."
+    },
+    {
+      "project": "animai-kingdom",
+      "status": "suggested",
+      "connection": "Processes natural-language conversations through text and speech. Evidence should show language-processing improvements and before-and-after evaluation."
     }
   ],
   "ai-3": [
@@ -484,6 +498,11 @@ const MAPPINGS = {
       "project": "boards-personal-website",
       "status": "suggested",
       "connection": "Site source exists; collect requirements, design and testing records."
+    },
+    {
+      "project": "animai-kingdom",
+      "status": "suggested",
+      "connection": "Demonstrates the software-development process through requirements, design, implementation, testing, and documented individual contributions."
     }
   ],
   "acs-2": [

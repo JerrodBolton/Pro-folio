@@ -607,3 +607,125 @@ a:hover { color: #ffa866; }
 /* Project page header: tag, logo, and intro all centered */
 .project-page-head { text-align: center; }
 .project-page-head .page-intro { margin-left: auto; margin-right: auto; }
+
+/* Project cards: status tag, links, and logo-less placeholders */
+.project-card .card-status { margin: 0 0 6px; }
+.project-card h2 { margin: 0 0 6px; font-family: var(--font-display); font-size: 1.15rem; }
+.project-card h2 a { color: var(--text); text-decoration: none; }
+.project-card h2 a:hover { color: var(--accent); }
+.project-card .card-links { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 0; font-size: 0.9rem; }
+.project-card > a { display: block; }
+.project-monogram {
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: radial-gradient(circle at 35% 30%, rgba(80, 200, 130, 0.25), rgba(16, 26, 22, 0.9));
+  border: 1px solid var(--accent-secondary);
+}
+.portfolio-grid { max-width: none; }
+
+/* ---------- "Where it all began" caption for the code column ---------- */
+
+.code-caption {
+  position: relative;
+  z-index: 2;
+  padding: 0 0 44px;
+}
+.code-caption .container { max-width: 1400px; }
+.code-caption-inner {
+  /* how far the centered container has drifted right of the code column */
+  --shift: max(0px, (100vw - 1400px) / 2);
+  position: relative;
+  max-width: 440px;
+  margin-left: calc(var(--code-col) + 24px - var(--gutter));
+  padding: 6px 0 6px 46px;
+}
+/* Thin "]" bracket hugging the right edge of the code column */
+.code-caption-inner::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: calc(-20px - var(--shift));
+  width: 9px;
+  border: 1px solid var(--accent);
+  border-left: 0;
+  border-radius: 0 3px 3px 0;
+  box-shadow: 2px 0 8px rgba(255, 139, 54, 0.35);
+}
+/* Connecting line from the bracket to the caption, ending in a small node */
+.code-caption-inner::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(-11px - var(--shift));
+  width: calc(45px + var(--shift));
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent), rgba(255, 139, 54, 0.55));
+  box-shadow: 0 0 6px rgba(255, 139, 54, 0.6);
+}
+.code-caption-title {
+  margin: 0 0 6px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-shadow: 0 0 10px rgba(255, 139, 54, 0.45);
+}
+.code-caption-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+/* Narrow screens: code moves to the end of the page, with its caption above it */
+@media (max-width: 1000px) {
+  .home { display: flex; flex-direction: column; }
+  .home > .hero { order: 1; }
+  .home > .home-projects { order: 2; }
+  .home > .code-caption { order: 3; padding: 8px 0 0; }
+  .home > .hero-code {
+    order: 4;
+    display: block;
+    position: static;
+    width: auto;
+    max-height: 240px;
+    margin: 0 var(--gutter) 36px;
+    padding: 4px 0 16px;
+    opacity: 0.35;
+    font-size: 10.5px;
+  }
+  .code-caption-inner {
+    margin-left: 0;
+    max-width: none;
+    padding: 0 0 30px;
+  }
+  /* Bracket turns sideways and opens down toward the code below */
+  .code-caption-inner::before {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 9px;
+    border: 1px solid var(--accent);
+    border-bottom: 0;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 -2px 8px rgba(255, 139, 54, 0.35);
+  }
+  .code-caption-inner::after {
+    top: auto;
+    bottom: 9px;
+    left: 22px;
+    width: 1px;
+    height: 16px;
+    background: var(--accent);
+  }
+}
+

@@ -69,8 +69,14 @@
           ? el("a", { href: p.externalUrl, text: name })
           : name;
         const action = p && p.externalUrl
-          ? el("a", { class: "detail-btn detail-link", href: p.externalUrl },
-              el("span", { text: `Visit the ${name} website` }))
+          ? el("div", { class: "match-links" },
+              el("a", { class: "detail-btn detail-link", href: p.externalUrl },
+                el("span", { text: `Visit the ${name} website` })),
+              p.sourceUrl
+                ? el("a", { class: "source-link", href: p.sourceUrl },
+                    el("span", { text: "View source code on GitHub" }),
+                    el("span", { class: "visually-hidden", text: ` for ${name}` }))
+                : "")
           : el("button", {
               class: "detail-btn", type: "button",
               "data-action": "detail", "data-key": key, "data-project": m.project,
@@ -112,7 +118,9 @@
 
   /* ---------- Flip ---------- */
 
-  function setFlipped(card, flipped) {
+  // quiet: used by "Flip all" — no per-card focus moves, announcements or
+  // height animation (heights change at once so the scroll can be anchored).
+  function setFlipped(card, flipped, quiet = false) {
     const inner = card.querySelector(".obj-inner");
     const front = card.querySelector(".obj-front");
     const back = card.querySelector(".obj-back");
@@ -121,7 +129,7 @@
     const oldH = inner.offsetHeight;
     front.classList.toggle("is-offstage", flipped);
     back.classList.toggle("is-offstage", !flipped);
-    if (!reduceMotion.matches) {
+    if (!reduceMotion.matches && !quiet) {
       const newH = (flipped ? back : front).offsetHeight;
       inner.style.height = oldH + "px";
       void inner.offsetHeight;
@@ -139,6 +147,8 @@
     back.inert = !flipped;
     front.setAttribute("aria-hidden", String(flipped));
     back.setAttribute("aria-hidden", String(!flipped));
+    updateFlipAll();
+    if (quiet) return;
     const target = flipped
       ? back.querySelector(".detail-btn, .unflip-btn")
       : front.querySelector(".flip-btn");
@@ -161,6 +171,34 @@
       // Clicking/tapping anywhere on the front flips it
       setFlipped(card, true);
     }
+  });
+
+  /* ---------- Flip all ---------- */
+
+  const flipAllBtn = document.getElementById("flip-all");
+  const allCards = () => [...listView.querySelectorAll(".obj-card")];
+
+  // Shows "Flip all to projects" until every card is flipped, then offers to flip back
+  function updateFlipAll() {
+    const cards = allCards();
+    const allFlipped = cards.length > 0 && cards.every((c) => c.classList.contains("is-flipped"));
+    flipAllBtn.dataset.state = allFlipped ? "back" : "projects";
+    flipAllBtn.querySelector(".flip-all-label").textContent =
+      allFlipped ? "Flip all back to objectives" : "Flip all to projects";
+    // Shorter wording on phones so it sits beside a card's own flip-back button
+    flipAllBtn.querySelector(".flip-all-short").textContent = allFlipped ? "Unflip all" : "Flip all";
+  }
+
+  flipAllBtn.addEventListener("click", () => {
+    const toProjects = flipAllBtn.dataset.state !== "back";
+    // Keep the card nearest the top of the screen in place while every card resizes
+    const anchor = allCards().find((c) => c.getBoundingClientRect().bottom > 80);
+    const before = anchor ? anchor.getBoundingClientRect().top : 0;
+    allCards().forEach((c) => {
+      if (c.classList.contains("is-flipped") !== toProjects) setFlipped(c, toProjects, true);
+    });
+    if (anchor) window.scrollBy({ top: anchor.getBoundingClientRect().top - before, behavior: "instant" });
+    announce(toProjects ? "All cards showing projects" : "All cards showing objectives");
   });
 
   /* ---------- Detail view ---------- */
@@ -239,5 +277,6 @@
   });
 
   render();
+  updateFlipAll();
   document.documentElement.classList.add("js-ready");
 })();
