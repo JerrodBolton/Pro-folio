@@ -45,8 +45,38 @@
       <div class="container" style="padding-top:32px;padding-bottom:72px;max-width:900px">
         <p><span class="dev-tag">In development</span></p>
         <p class="page-intro">A curated selection of my strongest projects.</p>
-        <section class="panel panel-with-logo"><a class="panel-logo" href="http://animaikingdom.com" data-animai-link tabindex="-1" aria-hidden="true"><img src="assets/project-logos/animai-kingdom-logo-web.png" alt="" width="600" height="451" /></a><div class="panel-body"><h2><a href="http://animaikingdom.com" data-animai-link>Animai Kingdom</a></h2><p class="muted">AI desk companion project — my <a href="http://animaikingdom.com" data-animai-link>Student Innovation Project</a>. Follow its development and progress on the <a href="http://animaikingdom.com" data-animai-link>Animai Kingdom website</a>.</p></div></section>
-        <section class="panel panel-with-logo"><a class="panel-logo" href="projects/local-ai-assistant.html" tabindex="-1" aria-hidden="true"><img class="logo-square" src="assets/project-logos/vortexa-logo-web.jpg" alt="" width="600" height="600" /></a><div class="panel-body"><h2><a href="projects/local-ai-assistant.html">VORTEXA</a></h2><p class="muted">Desktop local-LLM assistant with a chat interface, model switching and session conversation history.</p></div></section>
+        <section class="panel panel-with-logo" id="animai-kingdom" aria-labelledby="animai-title">
+          <a class="panel-logo" href="http://animaikingdom.com" data-animai-link tabindex="-1" aria-hidden="true"><img src="assets/project-logos/animai-kingdom-logo-web.png" alt="" width="600" height="451" /></a>
+          <div class="panel-body">
+            <h2 id="animai-title"><a href="http://animaikingdom.com" data-animai-link>Animai Kingdom</a></h2>
+            <p><span class="dev-tag">Prototype</span></p>
+            <p class="muted">AI animal companion for conversation, productivity, motivation and brainstorming. This is my Student Innovation Project, currently in development.</p>
+            <p><a href="http://animaikingdom.com" data-animai-link>Visit Animai Kingdom</a> · <a href="https://github.com/JerrodBolton/Animai">View public prototype source</a></p>
+          </div>
+        </section>
+        <section class="panel panel-with-logo" id="vortexa" aria-labelledby="vortexa-title">
+          <a class="panel-logo" href="projects/local-ai-assistant.html" tabindex="-1" aria-hidden="true"><img class="logo-square" src="assets/project-logos/vortexa-logo-web.jpg" alt="" width="600" height="600" /></a>
+          <div class="panel-body">
+            <h2 id="vortexa-title"><a href="projects/local-ai-assistant.html">VORTEXA</a></h2>
+            <p><span class="dev-tag">In development</span></p>
+            <p class="muted">Desktop local-LLM assistant with a chat interface, model switching and session conversation history. The Python implementation uses CustomTkinter and llama-cpp-python.</p>
+            <p><a href="projects/local-ai-assistant.html">Explore VORTEXA</a> · <a href="https://github.com/JerrodBolton/Python-II-class/tree/main/Vortexa%20IIII">View source code</a></p>
+          </div>
+        </section>
+        <section class="panel" id="wildsight" aria-labelledby="wildsight-title" style="scroll-margin-top:88px">
+          <h2 id="wildsight-title">WILDSIGHT</h2>
+          <p><span class="dev-tag">Planned</span></p>
+          <p class="muted">An animal image classifier designed to recognize cats, dogs and birds using a small convolutional neural network.</p>
+          <p>The first version will prepare labeled images, train the model and evaluate it on separate test images. Training curves, per-class results and incorrect predictions will explain what the network learns and where it struggles. An image-upload interface will follow model evaluation.</p>
+          <p class="muted">Planned evidence for AI Objectives 4 and 5. Implementation, a trained model and a public repository are still to come.</p>
+        </section>
+        <section class="panel" id="pixel-bang" aria-labelledby="pixel-bang-title" style="scroll-margin-top:88px">
+          <h2 id="pixel-bang-title">Pixel Bang</h2>
+          <p><span class="dev-tag">In development</span></p>
+          <p class="muted">A local text-to-image project that turns written prompts into generated images.</p>
+          <p>The project explores integrating an image-generation model into a local application. Next steps are documenting the model and dependencies, publishing the source, and collecting prompt-and-image examples for a reproducible demonstration.</p>
+          <p class="muted">Proposed evidence for AI Objectives 1 and 4. Public source and demonstration links will be added when available.</p>
+        </section>
       </div>
     </main>
 
