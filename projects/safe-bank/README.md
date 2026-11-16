@@ -8,6 +8,7 @@ Educational banking prototype created with Robert to practice deposits, withdraw
 
 ## Review links
 
+- [Live site](https://jerrodbolton.github.io/Jerrod_Robert.safebank/mySafe.html)
 - [GitHub repository](https://github.com/JerrodBolton/Jerrod_Robert.safebank)
 - [Inspected snapshot](https://github.com/JerrodBolton/Jerrod_Robert.safebank/tree/8175c0398573739fa5cade758ed29b3de49e9c65)
 - [Commit history](https://github.com/JerrodBolton/Jerrod_Robert.safebank/commits/main/)

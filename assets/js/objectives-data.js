@@ -42,6 +42,11 @@ const OBJECTIVES = {
 const PROJECTS = {
   "animai-kingdom": {
     title: "Animai Kingdom",
+    // Images shown in the swipeable gallery
+    images: [
+      { src: "projects/animai-kingdom/images/ak-shark-finished.jpg", alt: "Finished white 3D-printed Animai Kingdom shark character wearing a suit jacket", caption: "Finished 3D-printed shark" },
+      { src: "projects/animai-kingdom/images/ak-shark-print.jpg", alt: "3D-printed shark figure on the print bed, still attached to its supports", caption: "Shark on the print bed, with supports" },
+    ],
     summary: "An AI animal companion designed for conversation, productivity, motivation and brainstorming. Status: Prototype — in development.",
     // Has its own website: objective entries link straight there
     // instead of opening the detail view. URL lives in site-config.js.
@@ -61,6 +66,12 @@ const PROJECTS = {
   },
   "pixel-bang": {
     "title": "Pixel Bang",
+    // Images shown in the swipeable gallery
+    images: [
+      { src: "projects/pixel-bang/images/pixel-bang-cabin.jpg", alt: "Generated image of a snow-covered log cabin in a pine forest at sunset", caption: "A cozy cabin in a snowy forest" },
+      { src: "projects/pixel-bang/images/pixel-bang-red-mug.jpg", alt: "Generated photorealistic image of a glossy red mug on a dark table", caption: "“a mug that is red that’s on a table”" },
+      { src: "projects/pixel-bang/images/pixel-bang-calico-cat.jpg", alt: "Generated illustration of a calico cat lying on a cushion", caption: "Calico cat from a loosely worded prompt" },
+    ],
     "summary": "Local text-to-image command-line app that turns written prompts into generated images with SDXL-Turbo. Status: Public implementation source; prompt/output documentation pending.",
     "page": "",
     "contribution": "",
@@ -138,6 +149,12 @@ const PROJECTS = {
   },
   "local-ai-assistant": {
     "title": "VORTEXA",
+    // Images shown in the swipeable gallery
+    images: [
+      { src: "projects/vortexa/images/vortexa-chat-help.jpg", alt: "VORTEXA answering a message in character, with token count and response time", caption: "Streamed reply with token count and timing" },
+      { src: "projects/vortexa/images/vortexa-chat-history.jpg", alt: "VORTEXA multi-turn conversation with saved conversations in the sidebar", caption: "Multi-turn chat and conversation list" },
+      { src: "projects/vortexa/images/vortexa-model-switch.jpg", alt: "VORTEXA model menu listing two local GGUF models", caption: "Switching between local models" },
+    ],
     "summary": "Desktop local-LLM assistant with a chat interface, model switching and session conversation history. Status: Public implementation source; runtime/evaluation pending.",
     "page": "projects/vortexa/index.html",
     "contribution": "",
@@ -205,6 +222,12 @@ const PROJECTS = {
   },
   "jonnybot": {
     "title": "Jonnybot",
+    // Images shown in the swipeable gallery
+    images: [
+      { src: "projects/jonnybot/images/jonnybot-reward-grid.jpg", alt: "Jonnybot on a 6-by-10 reward grid laid over a sci-fi room", caption: "Reward grid over the room map" },
+      { src: "projects/jonnybot/images/jonnybot-first-grid.jpg", alt: "Early Jonnybot window with a plain labelled grid and the blue robot square", caption: "Early version with random moves" },
+      { src: "projects/jonnybot/images/jonnybot-room-art.jpg", alt: "Top-down sci-fi room artwork used as the Jonnybot background", caption: "Room background art" },
+    ],
     "summary": "Grid-based security-robot simulation that explores actions and updates a Q-table from cell rewards. Status: Public Q-learning source; evaluation and GA extension pending.",
     "page": "",
     "contribution": "",
@@ -251,6 +274,11 @@ const PROJECTS = {
     "contribution": "",
     "tools": "HTML, CSS, JavaScript, DOM events, browser storage",
     "evidence": [
+      {
+        "type": "Live site",
+        "label": "Try Safe Bank",
+        "href": "https://jerrodbolton.github.io/Jerrod_Robert.safebank/mySafe.html"
+      },
       {
         "type": "GitHub",
         "label": "Repository",

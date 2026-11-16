@@ -17,8 +17,8 @@
       else if (k === "text") node.textContent = v;
       else node.setAttribute(k, v);
     }
-    // GitHub links open in a new tab
-    if (tag === "a" && /^https:\/\/github\.com\//i.test(attrs.href || "")) {
+    // GitHub links (and GitHub Pages sites) open in a new tab
+    if (tag === "a" && /^https:\/\/([a-z0-9-]+\.)?github\.(com|io)\//i.test(attrs.href || "")) {
       node.target = "_blank";
       node.rel = "noopener noreferrer";
     }
@@ -36,6 +36,53 @@
     return status === "verified"
       ? el("span", { class: "badge badge-verified", text: "Verified" })
       : el("span", { class: "badge badge-suggested", text: "Suggested match · not verified" });
+  }
+
+  /* ---------- Image swiper ----------
+     Swipe right-to-left (or use the arrows / arrow keys) to move
+     through a project's images. Uses native scroll-snap. */
+
+  function swiper(project) {
+    const images = (project && project.images) || [];
+    if (!images.length) return "";
+    const n = images.length;
+    const track = el("div", {
+      class: "swiper-track", tabindex: "0", role: "group",
+      "aria-label": `${project.title} images. Swipe or use the arrow keys to see more.`,
+    }, images.map((im, i) =>
+      el("figure", { class: "swiper-slide", "aria-label": `Image ${i + 1} of ${n}` },
+        el("a", { href: im.src, target: "_blank", rel: "noopener" },
+          el("img", { src: im.src, alt: im.alt || "", loading: "lazy" })),
+        im.caption ? el("figcaption", { text: im.caption }) : "")));
+
+    const counter = el("span", { class: "swiper-count", "aria-hidden": "true", text: `1 / ${n}` });
+    const prev = el("button", { class: "swiper-btn", type: "button", "aria-label": "Previous image" },
+      el("span", { "aria-hidden": "true", text: "‹" }));
+    const next = el("button", { class: "swiper-btn", type: "button", "aria-label": "Next image" },
+      el("span", { "aria-hidden": "true", text: "›" }));
+    const dots = el("div", { class: "swiper-dots", "aria-hidden": "true" },
+      images.map(() => el("span", { class: "swiper-dot" })));
+
+    const current = () => Math.round(track.scrollLeft / Math.max(track.clientWidth, 1));
+    const go = (i) => track.scrollTo({
+      left: Math.max(0, Math.min(n - 1, i)) * track.clientWidth,
+      behavior: reduceMotion.matches ? "auto" : "smooth",
+    });
+    const update = () => {
+      const i = current();
+      counter.textContent = `${i + 1} / ${n}`;
+      prev.disabled = i <= 0;
+      next.disabled = i >= n - 1;
+      [...dots.children].forEach((d, j) => d.classList.toggle("is-active", j === i));
+    };
+    prev.addEventListener("click", () => go(current() - 1));
+    next.addEventListener("click", () => go(current() + 1));
+    track.addEventListener("scroll", () => requestAnimationFrame(update), { passive: true });
+    update();
+
+    const root = el("div", { class: "swiper" }, track);
+    if (n > 1) root.append(el("div", { class: "swiper-controls" }, prev, dots, counter, next));
+    return root;
   }
 
   /* ---------- Build cards ---------- */
@@ -92,7 +139,8 @@
             el("p", { class: "match-title" }, title),
             statusBadge(m.status)),
           el("p", { class: "match-connection", text: m.connection }),
-          action));
+          action,
+          swiper(p)));
       });
     }
     const unflipBtn = el("button", { class: "unflip-btn", type: "button", "data-action": "unflip" },
@@ -248,7 +296,8 @@
         detailSection("Reflection", project.reflection)),
       project.page
         ? el("p", { class: "detail-more" }, el("a", { href: project.page, text: `Full ${project.title} project page →` }))
-        : ""
+        : "",
+      swiper(project)
     );
 
     listView.hidden = true;
