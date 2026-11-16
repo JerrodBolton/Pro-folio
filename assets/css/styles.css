@@ -729,3 +729,32 @@ a:hover { color: #ffa866; }
   }
 }
 
+
+/* ---------- Project screenshot galleries ---------- */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 18px 0;
+}
+.project-gallery figure { margin: 0; }
+.project-gallery a { display: block; }
+.project-gallery img,
+.project-gallery video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: calc(var(--radius) * 0.6);
+  border: 1px solid var(--border-soft);
+  background: #000;
+}
+.project-gallery video,
+.project-gallery img.fit { object-fit: contain; }
+.project-gallery a:hover img { border-color: var(--accent); }
+.project-gallery figcaption {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
