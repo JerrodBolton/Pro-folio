@@ -752,6 +752,7 @@ a:hover { color: #ffa866; }
 }
 .project-gallery video,
 .project-gallery img.fit { object-fit: contain; }
+.project-gallery img.square { aspect-ratio: 1 / 1; }
 .project-gallery a:hover img { border-color: var(--accent); }
 .project-gallery figcaption {
   margin-top: 6px;

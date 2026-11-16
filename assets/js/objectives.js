@@ -17,6 +17,11 @@
       else if (k === "text") node.textContent = v;
       else node.setAttribute(k, v);
     }
+    // GitHub links open in a new tab
+    if (tag === "a" && /^https:\/\/github\.com\//i.test(attrs.href || "")) {
+      node.target = "_blank";
+      node.rel = "noopener noreferrer";
+    }
     children.flat().forEach((c) => c && node.append(c));
     return node;
   };
