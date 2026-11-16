@@ -46,7 +46,7 @@
         <p><span class="dev-tag">In development</span></p>
         <p class="page-intro">A curated selection of my strongest projects.</p>
         <section class="panel panel-with-logo" id="animai-kingdom" aria-labelledby="animai-title">
-          <a class="panel-logo" href="http://animaikingdom.com" data-animai-link tabindex="-1" aria-hidden="true"><img src="assets/project-logos/animai-kingdom-logo-web.png" alt="" width="600" height="451" /></a>
+          <a class="panel-logo" href="http://animaikingdom.com" data-animai-link tabindex="-1" aria-hidden="true"><img src="projects/animai-kingdom/images/animai-kingdom-logo-web.png" alt="" width="600" height="451" /></a>
           <div class="panel-body">
             <h2 id="animai-title"><a href="http://animaikingdom.com" data-animai-link>Animai Kingdom</a></h2>
             <p><span class="dev-tag">Prototype</span></p>
@@ -55,27 +55,27 @@
           </div>
         </section>
         <section class="panel panel-with-logo" id="vortexa" aria-labelledby="vortexa-title">
-          <a class="panel-logo" href="projects/local-ai-assistant.html" tabindex="-1" aria-hidden="true"><img class="logo-square" src="assets/project-logos/vortexa-logo-web.jpg" alt="" width="600" height="600" /></a>
+          <a class="panel-logo" href="projects/vortexa/index.html" tabindex="-1" aria-hidden="true"><img class="logo-square" src="projects/vortexa/images/vortexa-logo-web.jpg" alt="" width="600" height="600" /></a>
           <div class="panel-body">
-            <h2 id="vortexa-title"><a href="projects/local-ai-assistant.html">VORTEXA</a></h2>
+            <h2 id="vortexa-title"><a href="projects/vortexa/index.html">VORTEXA</a></h2>
             <p><span class="dev-tag">In development</span></p>
             <p class="muted">Desktop local-LLM assistant with a chat interface, model switching and session conversation history. The Python implementation uses CustomTkinter and llama-cpp-python.</p>
-            <p><a href="projects/local-ai-assistant.html">Explore VORTEXA</a> · <a href="https://github.com/JerrodBolton/Python-II-class/tree/main/Vortexa%20IIII">View source code</a></p>
+            <p><a href="projects/vortexa/index.html">Explore VORTEXA</a> · <a href="https://github.com/JerrodBolton/Python-II-class/tree/main/Vortexa%20IIII">View source code</a></p>
           </div>
         </section>
-        <section class="panel" id="wildsight" aria-labelledby="wildsight-title" style="scroll-margin-top:88px">
-          <h2 id="wildsight-title">WILDSIGHT</h2>
-          <p><span class="dev-tag">Planned</span></p>
-          <p class="muted">An animal image classifier designed to recognize cats, dogs and birds using a small convolutional neural network.</p>
-          <p>The first version will prepare labeled images, train the model and evaluate it on separate test images. Training curves, per-class results and incorrect predictions will explain what the network learns and where it struggles. An image-upload interface will follow model evaluation.</p>
-          <p class="muted">Planned evidence for AI Objectives 4 and 5. Implementation, a trained model and a public repository are still to come.</p>
+        <section class="panel" id="greenspires" aria-labelledby="greenspires-title" style="scroll-margin-top:88px">
+          <h2 id="greenspires-title"><a href="https://github.com/JerrodBolton/Greenspires">Greenspires</a></h2>
+          <p><span class="dev-tag">Prototype</span></p>
+          <p class="muted">A mobile journaling app that connects reflection entries to the growth of a virtual plant. Built with TypeScript, React Native and Expo.</p>
+          <p>Users pick and name a plant, then write session reflections that earn growth points and move the plant through growth stages. The prototype includes onboarding, home and settings screens, with plant state saved locally on the device. An AI-generated reflection reply feature is planned.</p>
+          <p><a href="https://github.com/JerrodBolton/Greenspires">View source code</a> · <a href="https://github.com/JerrodBolton/Greenspires/blob/23aae1df5e4975d730ff26bb4f1f2619c78b8138/screenshots/ScreenRecording_08-14-2026%2023-14-17_1.MP4">Watch the demo recording</a></p>
         </section>
         <section class="panel" id="pixel-bang" aria-labelledby="pixel-bang-title" style="scroll-margin-top:88px">
-          <h2 id="pixel-bang-title">Pixel Bang</h2>
+          <h2 id="pixel-bang-title"><a href="https://github.com/JerrodBolton/pixel-bag">Pixel Bang</a></h2>
           <p><span class="dev-tag">In development</span></p>
-          <p class="muted">A local text-to-image project that turns written prompts into generated images.</p>
-          <p>The project explores integrating an image-generation model into a local application. Next steps are documenting the model and dependencies, publishing the source, and collecting prompt-and-image examples for a reproducible demonstration.</p>
-          <p class="muted">Proposed evidence for AI Objectives 1 and 4. Public source and demonstration links will be added when available.</p>
+          <p class="muted">A local text-to-image tool that turns written prompts into generated images, running entirely on my own computer.</p>
+          <p>A Python command-line app loads Stability AI's SDXL-Turbo diffusion model through Hugging Face <code>diffusers</code> and PyTorch. It runs on the Apple Silicon GPU when available (falling back to CUDA or CPU), generates an image in a few denoising steps, and saves it as a PNG. A seed option makes results repeatable.</p>
+          <p><a href="https://github.com/JerrodBolton/pixel-bag">View source code</a> · <a href="https://github.com/JerrodBolton/pixel-bag/blob/ba0189709d74d348c290c9714d676c9bc10317a2/generate.py">Read generate.py</a></p>
         </section>
       </div>
     </main>

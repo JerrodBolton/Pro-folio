@@ -61,11 +61,32 @@ const PROJECTS = {
   },
   "pixel-bang": {
     "title": "Pixel Bang",
-    "summary": "Local text-to-image project intended to turn written prompts into generated images. Status: Reported local project; public code not located.",
+    "summary": "Local text-to-image command-line app that turns written prompts into generated images with SDXL-Turbo. Status: Public implementation source; prompt/output documentation pending.",
     "page": "",
     "contribution": "",
-    "tools": "Python/local image-generation stack — verify model and libraries",
-    "evidence": [],
+    "tools": "Python, PyTorch, Hugging Face diffusers, transformers, accelerate; Stability AI SDXL-Turbo; uv",
+    "evidence": [
+      {
+        "type": "GitHub",
+        "label": "Repository",
+        "href": "https://github.com/JerrodBolton/pixel-bag"
+      },
+      {
+        "type": "Source code",
+        "label": "generate.py",
+        "href": "https://github.com/JerrodBolton/pixel-bag/blob/ba0189709d74d348c290c9714d676c9bc10317a2/generate.py"
+      },
+      {
+        "type": "Dependencies",
+        "label": "pyproject.toml",
+        "href": "https://github.com/JerrodBolton/pixel-bag/blob/ba0189709d74d348c290c9714d676c9bc10317a2/pyproject.toml"
+      },
+      {
+        "type": "Sample output",
+        "label": "outputs/cabin.png",
+        "href": "https://github.com/JerrodBolton/pixel-bag/blob/ba0189709d74d348c290c9714d676c9bc10317a2/outputs/cabin.png"
+      }
+    ],
     "results": "",
     "reflection": ""
   },
@@ -118,7 +139,7 @@ const PROJECTS = {
   "local-ai-assistant": {
     "title": "VORTEXA",
     "summary": "Desktop local-LLM assistant with a chat interface, model switching and session conversation history. Status: Public implementation source; runtime/evaluation pending.",
-    "page": "projects/local-ai-assistant.html",
+    "page": "projects/vortexa/index.html",
     "contribution": "",
     "tools": "Python, CustomTkinter, llama-cpp-python, Pillow; GGUF models",
     "evidence": [
