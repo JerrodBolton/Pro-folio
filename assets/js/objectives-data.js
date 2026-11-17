@@ -38,7 +38,8 @@ const OBJECTIVES = {
   },
 };
 
-/* Leave a field empty ("" or []) and the page shows "Evidence to be added". */
+/* Leave a field empty ("" or []) and the page shows "Evidence to be added".
+   images: add `objectives: ["acs-1"]` to an image to show it only on those objective cards. */
 const PROJECTS = {
   "animai-kingdom": {
     title: "Animai Kingdom",
@@ -46,6 +47,11 @@ const PROJECTS = {
     images: [
       { src: "projects/animai-kingdom/images/ak-shark-finished.jpg", alt: "Finished white 3D-printed Animai Kingdom shark character wearing a suit jacket", caption: "Finished 3D-printed shark" },
       { src: "projects/animai-kingdom/images/ak-shark-print.jpg", alt: "3D-printed shark figure on the print bed, still attached to its supports", caption: "Shark on the print bed, with supports" },
+      { src: "projects/animai-kingdom/images/ak-wireframe-hero.jpg", alt: "Desktop wireframe of the Animai Kingdom homepage hero: Where Fantasy Companions Meet Artificial Intelligence", caption: "Website wireframe: homepage hero", objectives: ["acs-1"] },
+      { src: "projects/animai-kingdom/images/ak-wireframe-home-about.jpg", alt: "Wireframe of the Animai Kingdom hero and About the Kingdom sections, with counts for 5 companions, 4 AI tools and 1 kingdom", caption: "Wireframe: hero and About the Kingdom", objectives: ["acs-1"] },
+      { src: "projects/animai-kingdom/images/ak-wireframe-companions.jpg", alt: "Wireframe of The Five Guardians section listing HeyShark, Penguin, Hank the Eagle, Monkey King and Panda", caption: "Wireframe: the five companions", objectives: ["acs-1"] },
+      { src: "projects/animai-kingdom/images/ak-wireframe-progress-ai.jpg", alt: "Wireframe of the Progress section at 65 percent and the AI Employees section listing ChatGPT, Gemini and Claude roles", caption: "Wireframe: progress and AI employees", objectives: ["acs-1"] },
+      { src: "projects/animai-kingdom/images/ak-wireframe-how-to-join.jpg", alt: "Wireframe of the How to Use the Website guide and What's Coming Next section with a contact form", caption: "Wireframe: how to use and what's next", objectives: ["acs-1"] },
     ],
     summary: "An AI animal companion designed for conversation, productivity, motivation and brainstorming. Status: Prototype — in development.",
     // Has its own website: objective entries link straight there
@@ -310,6 +316,14 @@ const PROJECTS = {
   },
   "boards-personal-website": {
     "title": "Boards Personal Website",
+    // Images shown in the swipeable gallery
+    images: [
+      { src: "projects/boards-personal-website/images/boards-site-home.jpg", alt: "Home page of this portfolio site: Jerrod Bolton hero with an astronaut and citadel, Featured Projects cards for Animai Kingdom and VORTEXA, and the first-code column", caption: "Portfolio home page" },
+      { src: "projects/boards-personal-website/images/boards-wireframe-home.jpg", alt: "Desktop wireframe of the portfolio home page: navigation, name and tagline, View Portfolio and Degree Objectives buttons, hero image and first-code snippet", caption: "Website wireframe: home page (desktop)", objectives: ["acs-1"] },
+      { src: "projects/boards-personal-website/images/boards-wireframe-home-phone.jpg", alt: "Phone wireframe of the portfolio home page with a menu button, hero image, name, tagline and stacked buttons", caption: "Website wireframe: home page (phone)", objectives: ["acs-1"] },
+      { src: "projects/boards-personal-website/images/boards-wireframe-portfolio.jpg", alt: "Wireframe of the Portfolio page listing Animai Kingdom, VORTEXA, WILDSIGHT and Pixel Bang with logos and descriptions", caption: "Website wireframe: Portfolio page", objectives: ["acs-1"] },
+      { src: "projects/boards-personal-website/images/boards-wireframe-about.jpg", alt: "Wireframe of the About Me page with Background, Education, Skills and experience, and Resume sections", caption: "Website wireframe: About Me page", objectives: ["acs-1"] },
+    ],
     "summary": "Personal portfolio showing projects, degree objectives, About, contact and SIP links. Status: Public website source; deployment/device checks pending.",
     "page": "",
     "contribution": "",

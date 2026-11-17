@@ -42,8 +42,11 @@
      Swipe right-to-left (or use the arrows / arrow keys) to move
      through a project's images. Uses native scroll-snap. */
 
-  function swiper(project) {
-    const images = (project && project.images) || [];
+  // objectiveKey (e.g. "acs-1"): images tagged with `objectives: [...]`
+  // only show on those objectives; untagged images show everywhere.
+  function swiper(project, objectiveKey) {
+    const images = ((project && project.images) || []).filter((im) =>
+      !im.objectives || im.objectives.includes(objectiveKey));
     if (!images.length) return "";
     const n = images.length;
     const track = el("div", {
@@ -140,7 +143,7 @@
             statusBadge(m.status)),
           el("p", { class: "match-connection", text: m.connection }),
           action,
-          swiper(p)));
+          swiper(p, key)));
       });
     }
     const unflipBtn = el("button", { class: "unflip-btn", type: "button", "data-action": "unflip" },
@@ -297,7 +300,7 @@
       project.page
         ? el("p", { class: "detail-more" }, el("a", { href: project.page, text: `Full ${project.title} project page →` }))
         : "",
-      swiper(project)
+      swiper(project, key)
     );
 
     listView.hidden = true;
