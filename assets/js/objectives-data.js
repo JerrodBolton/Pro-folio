@@ -278,7 +278,9 @@ const PROJECTS = {
     // Images shown in the swipeable gallery
     images: [
       { src: "projects/safe-bank/images/safe-bank-wireframe-balance.jpg", alt: "Wireframe of the Safe Bank account page with HOME and My SAFES navigation, a name's balance of $0.00, and Deposit and Withdraw inputs with buttons", caption: "Website wireframe: balance, deposit and withdraw", objectives: ["acs-1"] },
-      { src: "projects/safe-bank/images/safe-bank-wireframe-sketches.jpg", alt: "Early Safe Bank wireframe sketches: a home layout with open-new-safe and my-safe cards, a Welcome to the Safe Bank screen, and a safe balance screen with deposit and withdraw buttons", caption: "Early wireframe sketches of three screens", objectives: ["acs-1"] },
+      { src: "projects/safe-bank/images/safe-bank-wireframe-welcome.jpg", alt: "Safe Bank wireframe of the welcome screen: Welcome to the Safe Bank heading, an image placeholder and a large button", caption: "Wireframe: welcome screen", objectives: ["acs-1"] },
+      { src: "projects/safe-bank/images/safe-bank-wireframe-home.jpg", alt: "Safe Bank wireframe of the home layout with an info card and Open new safe and My safe cards", caption: "Wireframe: home with open new safe and my safe", objectives: ["acs-1"] },
+      { src: "projects/safe-bank/images/safe-bank-wireframe-safe.jpg", alt: "Safe Bank wireframe of a safe's balance screen with deposit and withdraw buttons", caption: "Wireframe: safe balance with deposit and withdraw", objectives: ["acs-1"] },
     ],
     "summary": "Educational banking prototype created with Robert to practice deposits, withdrawals and balance calculations. Status: Public prototype source and planning evidence; fixes pending.",
     "page": "",
